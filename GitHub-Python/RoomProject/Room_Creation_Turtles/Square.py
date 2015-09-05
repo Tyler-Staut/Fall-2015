@@ -6,5 +6,7 @@ Created on Sep 5, 2015
 
 import turtle
 
+
+
 Sq = turtle.Turtle()
 
