@@ -32,21 +32,41 @@ print('\n')                 #Spaces put between text so I can read info better
 print("L = ", L)
 print("S = ", S)
 print('\n')                 #Spaces put between text so I can read info better
+#-------------------------------------------------------
+
+#-----------------MORE VARIABLES-------------------------
+
+Square = 1
+
+semiCircle = 2      #These will have to be changed
+
+Triangle = 3
+
 #------------------QUESTIONS-----------------------------
 print("What Shape do you want your 4 rooms to be?\n",
-      "You Can Choose: Square, Circle, or Triangle.\n")
+      "You Can Choose: Square, Semi-Circle, or Triangle.\n")
 print("\n")                 #Spaces put between text so I can read info better
 
-rooms = ['Square', 'Circle', 'Triangle']        #This is used to define what type of room will be used.
+
+                            #Code for setting room 1 to a variable
+                            #INCOMPLETE
+while True:
+    room1 = input()
+    if room1== ('Square' or 'Semi-Circle' or 'Triangle'):
+        break
+    else:
+        print('Input was Wrong. Try Again.')
+
 
 
 #--------------------------------------------------------
 
 #----------------THIS IS GETTING CHANGED-----------------
-room1 = W*Y
-room2 = (L*W)+((S*W)/2)
-room3 = X*Y
-room4 = X*Z
+
+#room1 = W*Y
+#room2 = (L*W)+((S*W)/2)
+#room3 = X*Y
+#room4 = X*Z
 
 room_1_area = 1
 room_2_area = 1
