@@ -34,4 +34,4 @@ room4 = X*Z
 
 totalarea = room1 + room2 + room3 + room4
 
-print("Total Area", totalarea)
+print("Total Area:", totalarea)
