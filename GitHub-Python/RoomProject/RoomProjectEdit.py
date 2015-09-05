@@ -45,19 +45,19 @@ Triangle = 3
 #------------------QUESTIONS-----------------------------
 print("What Shape do you want your 4 rooms to be?\n",
       "You Can Choose: Square, Semi-Circle, or Triangle.\n")
-print("\n")                 #Spaces put between text so I can read info better
 
 
                             #Code for setting room 1 to a variable
                             #INCOMPLETE
 while True:
-    room1 = input()
-    if room1== ('Square' or 'Semi-Circle' or 'Triangle'):
+    room1 = input("What shape do you want Room 1 to be?\n")
+    if room1 in ('Square', 'Semi-Circle', 'Triangle'):
         break
     else:
         print('Input was Wrong. Try Again.')
 
 
+print(room1)        #Needs to print variable from above but its not right now for some reason
 
 #--------------------------------------------------------
 
