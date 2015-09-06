@@ -1,4 +1,4 @@
-#McMahon 3:16 says I just pissed my pants.
+#McMahon OHHHHHH YEAHHHHHH
 #OH MY GOD ITS DONE
 
 import math
