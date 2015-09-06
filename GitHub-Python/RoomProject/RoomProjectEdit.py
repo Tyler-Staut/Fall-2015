@@ -171,4 +171,3 @@ total_rooms_area = room_1_area + room_2_area + room_3_area + room_4_area
 #---------------------------------------------------------
 
 print("Total Area:", total_rooms_area)
->>>>>>> origin/master
