@@ -46,7 +46,7 @@ Square = 1
 
 semiCircle = 2      #These will have to be changed
 
-Triangle = Square/2
+Triangle = 3
 
 #------------------QUESTIONS-----------------------------
 print("What Shape do you want your 4 rooms to be?\n",
