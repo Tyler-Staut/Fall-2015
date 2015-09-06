@@ -63,7 +63,7 @@ while True:
         print('Input was Wrong. Try Again.')
 
 
-print(room1)        #Needs to print variable from above but its not right now for some reason
+print(room1)          #Needs to print variable from above but its not right now for some reason
 
 #--------------------------------------------------------
 
