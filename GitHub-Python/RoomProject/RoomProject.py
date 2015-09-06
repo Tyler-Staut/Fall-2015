@@ -1,6 +1,7 @@
 # IM DONT WITH THIS TONIGHT
 #I CAN'T RESIST THAT DOUBLE MEAT!!
 
+
 import math
 
 
@@ -41,11 +42,14 @@ print('\n')                 #Spaces put between text so I can read info better
 
 #-----------------MORE VARIABLES-------------------------
 
-Square = 1
+def var(Square):
+    bace * height
+    
+def var(Semi_Circle):
+    (math.pi(radius**2))/4
 
-semiCircle = 2      #These will have to be changed
-
-Triangle = 3
+def var(Triangle):
+    (base * height)/2
 
 #------------------QUESTIONS-----------------------------
 print("What Shape do you want your 4 rooms to be?\n",
