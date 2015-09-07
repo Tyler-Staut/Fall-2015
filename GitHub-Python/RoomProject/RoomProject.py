@@ -42,13 +42,13 @@ print('\n')                 #Spaces put between text so I can read info better
 
 #-----------------MORE VARIABLES-------------------------
 
-def var(Square):
+def shape(Square):
     bace * height
     
-def var(Semi_Circle):
+def shape(Semi_Circle):
     (math.pi(radius**2))/4
 
-def var(Triangle):
+def shape(Triangle):
     (base * height)/2
 
 #------------------QUESTIONS-----------------------------
