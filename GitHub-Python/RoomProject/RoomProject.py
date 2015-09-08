@@ -40,16 +40,23 @@ print("S = ", S)
 print('\n')                 #Spaces put between text so I can read info better
 #-------------------------------------------------------
 
+base = 1
+height = 1
+
 #-----------------MORE VARIABLES-------------------------
 
 def shape(Square):
     bace * height
+    print("Square")
+    
     
 def shape(Semi_Circle):
     (math.pi(radius**2))/4
+    print("Semi-Circle")
 
 def shape(Triangle):
     (base * height)/2
+    print("Triangle")
 
 #------------------QUESTIONS-----------------------------
 print("What Shape do you want your 4 rooms to be?\n",
@@ -66,7 +73,8 @@ while True:
         print('Input was Wrong. Try Again.')
 
 
-print(room1)          #Needs to print variable from above but its not right now for some reason
+shape(room1)          #Needs to print variable from above but its not right now for some reason
+print(room1)
 
 #--------------------------------------------------------
 
