@@ -46,16 +46,16 @@ height = 1
 #-----------------MORE VARIABLES-------------------------
 
 def shape(Square):
-    bace * height
+    sq = bace * height
     print("Square")
     
     
 def shape(Semi_Circle):
-    (math.pi(radius**2))/4
+    sc = (math.pi(radius**2))/4
     print("Semi-Circle")
 
 def shape(Triangle):
-    (base * height)/2
+    tr = (base * height)/2
     print("Triangle")
 
 #------------------QUESTIONS-----------------------------
