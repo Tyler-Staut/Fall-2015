@@ -45,18 +45,17 @@ height = 1
 
 #-----------------MORE VARIABLES-------------------------
 
-def Square(base, height):
-    area_square = base * height
-    return area_square
-    print("Square", area_square)
+def shape(Square):
+    sq = bace * height
+    print("Square")
     
     
-def Circle(radius):
-    return (math.pi(radius**2))/4
+def shape(Semi_Circle):
+    sc = (math.pi(radius**2))/4
     print("Semi-Circle")
 
-def Triangle(base, height):
-    return (base * height)/2
+def shape(Triangle):
+    tr = (base * height)/2
     print("Triangle")
 
 #------------------QUESTIONS-----------------------------
@@ -74,7 +73,7 @@ while True:
         print('Input was Wrong. Try Again.')
 
 
-          #Needs to print variable from above but its not right now for some reason
+shape(room1)          #Needs to print variable from above but its not right now for some reason
 print(room1)
 
 #--------------------------------------------------------
