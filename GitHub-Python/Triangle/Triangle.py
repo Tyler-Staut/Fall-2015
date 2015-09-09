@@ -10,17 +10,7 @@ print("You may choose from SAS, SSS, ASA, or AAS theorems") #Support for the amb
 
 #Angles will eventually be converted into degrees in code for ease of use.
 
-AngleA = 0
-AngleB = 0
-AngleC = 0
-SideA = 0
-SideB = 0
-SideC = 0
-areaSAS = 0
-areaSSS = 0
-areaASA = 0
-AreaAAS = 0
-s = 0
+
 triangleTheorem = str(input("Which theorem would you like to use? "))
 
 #--------------------Definitions of Theorems--------------------#
@@ -34,7 +24,8 @@ def SAS(SideA, AngleB, SideC): #Assume Angle C is the largest, and Angle A is sm
     print("Angle C = ", AngleC)
     print("Area = ", areaSAS)
 
-def SSS(SideA, SideB, SideC): 
+#SSS currently unavailable due to prominent domain errors
+'''def SSS(SideA, SideB, SideC): 
     s = (SideA + SideB + SideC)/2
     areaSSS = math.sqrt(s*(s - SideA)*(s - SideB)*(s - SideC))
     AngleA = math.acos((SideB**2 - SideA**2 + SideC**2)/2*SideB*SideC)
@@ -43,7 +34,7 @@ def SSS(SideA, SideB, SideC):
     print("Angle A = ", AngleA)
     print("Angle B = ", AngleB)
     print("Angle C = ", AngleC)
-    print("Area = ", areaSSS)       
+    print("Area = ", areaSSS)       '''
     
 def ASA(AngleA, SideC, AngleB):
     AngleC = math.pi - (AngleA + AngleB)
@@ -72,6 +63,7 @@ if triangleTheorem in ('SAS', 'SSS', 'ASA', 'AAS'):
             SideC = float(input("Side C: "))
             SAS(SideA, AngleB, SideC)
         elif triangleTheorem == 'SSS':
+            print("All sides must meet in a triangle.")
             SideA = float(input("Side A: "))
             SideB = float(input("Side B: "))
             SideC = float(input("Side C: "))
