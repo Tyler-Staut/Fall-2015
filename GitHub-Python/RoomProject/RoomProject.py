@@ -7,18 +7,18 @@ from math import *
 
 
 #------------------PLACE HOLDER----------------------
-'''
-print('''\n                 ----L--------/ \n
-        |          |    \       /\n
-      W |     1    |  2  \T    /\n
-        |          |     /\   /\n
-        ----------------/--A\/ \n  ''')
-print('''          
-        |          |        |\n
-      X |    3     |    4   |\n
-        |          |        |\n
-        -----Y----------Z----\n''')
-'''
+#
+#print('''\n                 ----L--------/ \n
+#        |          |    \       /\n
+#      W |     1    |  2  \T    /\n
+#        |          |     /\   /\n
+#        ----------------/--A\/ \n  ''')
+#print('''          
+#        |          |        |\n
+#      X |    3     |    4   |\n
+#        |          |        |\n
+#        -----Y----------Z----\n''')
+#
 #----------------------------------------------------
 #--------------------BASE CODE-----------------------
 
@@ -62,7 +62,7 @@ def Square(base, height):
     area_Square = area_Square                   #Tried to store variable but failed
     
 def SemiCircle(radius):
-    area_SemiCircle = (math.pi(radius**2))/4
+    area_SemiCircle = (pi(radius**2))/4
     print("The Area is: ", int(area_Circe))
     area_SemiCircle = area_SemiCircle
 
