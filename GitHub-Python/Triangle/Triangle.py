@@ -9,6 +9,7 @@ print("Find all the info of your triangle!")
 print("You may choose from SAS, SSS, ASA, or AAS theorems") #Support for the ambiguous case needed
 #--------------------Definitions of Theorems--------------------#
 def SAS(SideA, AngleB, SideC): #Assume Angle C is the largest, and Angle A is smallest.
+    areaSAS = (SideA*SideC*math.sin(AngleB))/2
     SideB = math.sqrt(SideA**2 + SideC**2 - 2*SideA*SideC*math.cos(AngleB))
     AngleA = math.asin(SideA*math.sin(AngleB)/SideB)
     AngleC = math.pi - (AngleA + AngleB)
@@ -23,7 +24,15 @@ def SSS(SideA, SideB, SideC): #Needs to use Law of Cosines to find 3 angle value
     AngleC = math.acos((SideA**2 + SideB**2 - SideC**2)/2*SideA*SideB)
        
     
-def ASA(Angle1, Side1, Angle2):
+def ASA(AngleA, SideC, AngleB):
+    AngleC = math.pi - (AngleA + AngleB)
+    SideA = (SideC*math.sin(AngleA)/math.sin(AngleC))
+    SideB = (SideC*math.sin(AngleB)/math.sin(AngleC))
+    areaASA = (SideC**2*math.sin(AngleA)*math.sin(AngleB)/(2*math.sin(AngleC)))
+    
+
+    
+    
     
 #----------------------------------------------------------------#
 input("Which theorem would you like to use? ")
