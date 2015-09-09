@@ -96,9 +96,24 @@ def room1(area_of_room):
 
     
 
+    area_Square = base * height
+    print("The Area is: ", int(area_Square))
+    area_Square = area_Square                   #Tried to store variable but failed
+    
+def SemiCircle(radius):
+    area_SemiCircle = (pi(radius**2))/4
+    print("The Area is: ", int(area_Circe))
+    area_SemiCircle = area_SemiCircle
+
+def Triangle(base, height):
+    area_Triangle = (base * height)/2
+    print("The Area is: ", int(area_Triangle))
+    area_Triangle = area_Triangle
+
 #-------------ROOM & SIZE QUESTIONS-----------------------
 print("What Shape do you want your 4 rooms to be?\n",
       "You Can Choose: Square, SemiCircle, or Triangle.\n")
+
 
 
 while True:
@@ -119,6 +134,110 @@ while True:
         break
     else:
         print('Input was Wrong. Try Again.')
+
+
+                            #Code for setting room 1 to a variable
+                            #INCOMPLETE
+while True:
+    room1 = str(input("What shape do you want Room 1 to be?\n"))
+    if room1 in ('Square', 'SemiCircle', 'Triangle'):
+        break
+    else:
+        print('Input was Wrong. Try Again.')
+
+#-----
+if room1 in ('Square', 'SemiCircle', 'Triangle'):
+    if Square:
+        base = float(input("Base: "))
+        height = float(input("Height: "))
+        Square(base, height)
+        room_1_area = area_Square
+    elif SemiCircle:
+        radius = float(input("Radius: "))
+        SemiCircle(radius)
+        room_1_area = area_SemiCircle
+    elif Triangle:
+        base = float(input("Base: "))
+        height = float(input("Height: "))
+        Triangle(base, height)
+        room_1_area = area_Triangle
+
+#-----
+       
+while True:
+    room2 = str(input("What shape do you want Room 2 to be?\n"))
+    if room2 in ('Square', 'SemiCircle', 'Triangle'):
+        break
+    else:
+        print('Input was Wrong. Try Again.')
+        
+#-----
+if room2 in ('Square', 'SemiCircle', 'Triangle'):
+    if Square:
+        base = float(input("Base: "))
+        height = float(input("Height: "))
+        Square(base, height)
+        room_2_area = area_Square
+    elif SemiCircle:
+        radius = float(input("Radius: "))
+        SemiCircle(radius)
+        room_2_area = area_SemiCircle
+    elif Triangle:
+        base = float(input("Base: "))
+        height = float(input("Height: "))
+        Triangle(base, height)
+        room_2_area = area_Triangle
+#-----
+        
+while True:
+    room3 = str(input("What shape do you want Room 3 to be?\n"))
+    if room3 in ('Square', 'SemiCircle', 'Triangle'):
+        break
+    else:
+        print('Input was Wrong. Try Again.')
+        
+#-----
+if room3 in ('Square', 'SemiCircle', 'Triangle'):
+    if Square:
+        base = float(input("Base: "))
+        height = float(input("Height: "))
+        Square(base, height)
+        room_3_area = area_Square
+    elif SemiCircle:
+        radius = float(input("Radius: "))
+        SemiCircle(radius)
+        room_3_area = area_SemiCircle
+    elif Triangle:
+        base = float(input("Base: "))
+        height = float(input("Height: "))
+        Triangle(base, height)
+        room_3_area = area_Triangle
+#-----
+        
+while True:
+    room4 = str(input("What shape do you want Room 4 to be?\n"))
+    if room4 in ('Square', 'SemiCircle', 'Triangle'):
+        break
+    else:
+        print('Input was Wrong. Try Again.')
+        
+#-----
+if room4 in ('Square', 'SemiCircle', 'Triangle'):
+    if Square:
+        base = float(input("Base: "))
+        height = float(input("Height: "))
+        Square(base, height)
+        room_4_area = area_Square
+    elif SemiCircle:
+        radius = float(input("Radius: "))
+        SemiCircle(radius)
+        room_4_area = area_SemiCircle
+    elif Triangle:
+        base = float(input("Base: "))
+        height = float(input("Height: "))
+        Triangle(base, height)
+        room_4_area = area_Triangle
+#-----
 
 
 
