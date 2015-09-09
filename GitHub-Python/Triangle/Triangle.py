@@ -19,6 +19,6 @@ def SAS(Side1, Angle1, Side2):
 def SSS(Side1, Side2, Side3):
     s = (Side1 + Side2 + Side3)/2
     areaSSS = math.sqrt(s*(s - Side1)*(s - Side2)*(s - Side3))
-    
+    Angle1 = 
 input("Which theorem would you like to use? ")
 
