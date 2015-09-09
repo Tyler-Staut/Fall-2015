@@ -40,24 +40,22 @@ print("S = ", S)
 print('\n')                 #Spaces put between text so I can read info better
 #-------------------------------------------------------
 
-base = 1
-height = 1
+
 
 #-----------------MORE VARIABLES-------------------------
 
 def Square(base, height):
     area_square = base * height
-    return area_square
-    print("Square", area_square)
+    print(int(area_square))
     
     
 def Circle(radius):
-    return (math.pi(radius**2))/4
-    print("Semi-Circle")
+    area_Circle = (math.pi(radius**2))/4
+    print(int(area_Circe))
 
 def Triangle(base, height):
-    return (base * height)/2
-    print("Triangle")
+    area_Triangle = (base * height)/2
+    print(int(area_Triangle))
 
 #------------------QUESTIONS-----------------------------
 print("What Shape do you want your 4 rooms to be?\n",
@@ -69,7 +67,13 @@ print("What Shape do you want your 4 rooms to be?\n",
 while True:
     room1 = input("What shape do you want Room 1 to be?\n")
     if room1 in ('Square', 'Semi-Circle', 'Triangle'):
-        break
+        if Square:
+            Square(int(input("Base: ")), int(input("Height: ")))
+        if Circle:
+            Circle(int(input("Radius: ")))
+        if Triangle:
+            Triangle(int(input("base: ")), int(input("Height: ")))
+            break
     else:
         print('Input was Wrong. Try Again.')
 
