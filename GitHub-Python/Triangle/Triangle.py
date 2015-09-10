@@ -12,7 +12,7 @@ print("You may choose from SAS, SSS, ASA, or AAS theorems") #Support for the amb
 
 
 #--------------------Definitions of Theorems--------------------#
-def SAS(SideA, AngleB, SideC): #Assume Angle C is the largest, and Angle A is smallest.
+def SAS(SideA, AngleB, SideC): #Needs Fixing 9/10/15
     areaSAS = float((SideA*SideC*math.sin(AngleB))/2)
     SideB = float(math.sqrt(SideA**2 + SideC**2 - 2*SideA*SideC*math.cos(AngleB)))
     AngleA = float(math.asin(SideA*math.sin(AngleB)/SideB)*(180/math.pi))
