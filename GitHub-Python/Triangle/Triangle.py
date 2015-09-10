@@ -65,7 +65,7 @@ if triangleTheorem in ('SAS', 'SSS', 'ASA', 'AAS'):
             print("The three sides must meet absolutely perfectly in order to work.")
             SideA = float(input("Side A: "))
             SideB = float(input("Side B: "))
-            print("Length of Side C must be between ", float(math.sqrt(SideA**2 + SideB**2 - 2*SideA*SideB)), "and", float(math.sqrt(SideA**2 + SideB**2 + 2*SideA*SideB)))
+            print("Length of Side C must be greater than ", float(math.sqrt(SideA**2 + SideB**2 - 2*SideA*SideB)), "units, but less than ", float(math.sqrt(SideA**2 + SideB**2 + 2*SideA*SideB)), "units.")
             SideC = float(input("Side C: "))
             SSS(SideA, SideB, SideC)
         elif triangleTheorem == 'ASA':
