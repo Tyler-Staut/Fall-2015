@@ -54,7 +54,7 @@ def AAS(AngleA, AngleB, SideA):
     print("Side B = ", SideB)
     print("Area = ", areaAAS)
 #----------------------------------------------------------------#
-triangleTheorem = str(input("Which theorem would you like to use?"))
+triangleTheorem = str(input("Which theorem would you like to use? "))
 if triangleTheorem in ('SAS', 'SSS', 'ASA', 'AAS'):
         if triangleTheorem == 'SAS':
             SideA = float(input("Side A: "))
