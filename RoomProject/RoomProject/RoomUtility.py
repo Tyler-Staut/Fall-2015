@@ -3,6 +3,8 @@ Created on Sep 10, 2015
 
 @author: Tyler
 '''
+
+# JOOOHHHNNN CEEEEEENAAAAAAA!!!!
 #Imports----------
 from math import *
 from tkinter.constants import YES
