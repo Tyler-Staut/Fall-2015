@@ -12,7 +12,7 @@ from math import *
 area = 0
 total_room_area = 0
 roomArea = 0
-#total_room_area = 0
+
 
 
 
@@ -22,14 +22,12 @@ def squareRoom(base, height):
     return roomArea
     
     
-#Used to define what the SemiCircle room area is 
-area2 = 0   
+#Used to define what the SemiCircle room area is   
 def semicircleRoom(radius):
     roomArea = (pi(radius)**2) / 4
     return roomArea
     
-#Used to define what the Triangle room area is
-area3 = 0    
+#Used to define what the Triangle room area is 
 def triangleRoom(base, height):
     roomArea = (base * height) / 2
     return roomArea
@@ -53,6 +51,7 @@ def room():
                 base = float(input("Base: "))
                 height = float(input("Height: "))
                 roomArea = squareRoom(base, height)
+                print(roomArea)
                 return roomArea
                 
                 
