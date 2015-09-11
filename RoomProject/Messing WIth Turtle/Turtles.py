@@ -6,5 +6,5 @@ Created on Sep 5, 2015
 
 import turtle
 
-michaelBeans - turtle.Turtle()
+michaelBeans = turtle.Turtle()
 
