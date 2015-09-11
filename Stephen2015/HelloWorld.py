@@ -5,7 +5,7 @@ Created on Sep 10, 2015
 '''
 
 def fuckyou():
-    print("Go fuck yourself Tyler.")
+    print("My mommy likes it well done.")
     
 def die():
     print("die")
