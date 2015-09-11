@@ -4,6 +4,7 @@ Created on Sep 9, 2015
 @author: Matt
 '''
 import math
+import turtle
 
 print("Find all the info of your triangle!") 
 print("You may choose from SAS, SSS, ASA, or AAS theorems") #Support for the ambiguous case needed
@@ -32,6 +33,8 @@ def SSS(SideA, SideB, SideC):
     print("Angle B = ", AngleB, "degrees.")
     print("Angle C = ", AngleC, "degrees.")
     print("Area = ", areaSSS, "square units.")
+
+    
     
 def ASA(AngleA, SideC, AngleB):
     AngleC = float(math.pi - (AngleA + AngleB))*(180/math.pi)
