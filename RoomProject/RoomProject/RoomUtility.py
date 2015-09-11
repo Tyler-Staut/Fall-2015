@@ -75,7 +75,7 @@ def room():
             height = float(input("Height: "))
             area = triangleRoom(base, height)
             return area
-        break
+            
     else:
         print('Input was Wrong. Try Again.')
 print("\n")
@@ -107,9 +107,9 @@ def restart():
     yes=str("yes")
     no=str("no")
     restart = input("Restart?")
-    if restart = yes:
+    if restart == str(yes):
         runprogram()
-    elif restart = no:
+    elif restart == no:
         exit()
     
     
