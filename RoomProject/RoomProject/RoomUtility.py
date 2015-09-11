@@ -30,10 +30,8 @@ print('\n')                 #Spaces put between text so I can read info better
 #-------------------------------------------------------
 '''
 
-room_1_area = 0
-room_2_area = 0
-room_3_area = 0
-room_4_area = 0
+
+
 
 
 
@@ -56,7 +54,7 @@ def triangleRoom(base, height):         #Used to define what the Triangle room a
         
 
 def room():
-    room = str(input("What shape do you want room " + roomnum + " to be.\n"))
+    room = str(input("What shape do you want room " + str(roomnum) + " to be.\n"))
     if room in ('Square', 'SemiCircle', 'Triangle'):
         if room == 'Square':               #This is for Square room
             base = float(input("Base: "))
@@ -87,15 +85,19 @@ val4=0
 
 def values():
     roomnum=1
+    room()
     area=val1
     
-    roomnum=2
+    roomnum=roomnum+1
+    room()
     area=val2
     
-    roomnum=3
+    roomnum=roomnum+1
+    room()
     area=val3
     
-    roomnum=4
+    roomnum=roomnum+1
+    room()
     area=val4
 
 def total_room_area():
@@ -112,6 +114,7 @@ def restart():
     
     
 def runprogram():
+    values()
     print(val1)
     print(val2)
     print(val3)
