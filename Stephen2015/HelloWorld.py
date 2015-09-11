@@ -6,13 +6,14 @@ Created on Sep 10, 2015
 
 def fuckyou():
     print("My mommy likes it well done.")
+    print("            -Stephen\n")
     
 def die():
     print("die")
     
     
-x=1
-while x<20:
+
+while True:
     fuckyou()
-    x=x+1
+    
 
