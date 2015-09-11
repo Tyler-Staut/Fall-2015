@@ -10,6 +10,9 @@ from math import *
 
 #Needed to define area
 area = 0
+total_room_area = 0
+roomArea = 0
+#total_room_area = 0
 
 
 
@@ -34,11 +37,7 @@ def triangleRoom(base, height):
 #Used to define the different rooms
 
 
-room_1_area = 0
-room_2_area = 0
-room_3_area = 0
-room_4_area = 0
-    
+
     
     
 #--------------------USER INPUT--------------------
@@ -46,24 +45,31 @@ room_4_area = 0
 
 def room():
     while True:
+        
         print("What shape do you want this room to be?\n")  #Asks what room you want
         room = str(input("Response: "))
         if room in ('Square', 'SemiCircle', 'Triangle'):    #If room is in set then do the following
             if room == 'Square':                            #If square do:
                 base = float(input("Base: "))
                 height = float(input("Height: "))
-                area = squareRoom(base, height)
-                return area
+                roomArea = squareRoom(base, height)
+                return roomArea
+                
+                
                 
             elif room1 == 'SemiCircle':                     #If SemiCircle do:
                 radius = float(input("Radius: "))
-                area = semicircleRoom(radius)
-                return area
+                roomArea = semicircleRoom(radius)
+                total_room_area = total_room_area + roomArea
+                
+                
             elif room1 == 'Triangle':                       #If Triangle do:
                 base = float(input("Base: "))
                 height = float(input("Height: "))
-                area = triangleRoom(base, height)
-                return area
+                roomArea = triangleRoom(base, height)
+                total_room_area = total_room_area + roomArea
+                
+                
             break
         else:
             print('Input was Wrong. Try Again.')            #Not a correct input, go back through
@@ -73,25 +79,16 @@ def room():
 #--------------------------------------------------
 
 room()
-room_1_area = area
-
-
-room()
-room_2_area = area
-
+total_room_area = total_room_area + roomArea
 
 room()
-room_3_area = area
-
+total_room_area = total_room_area + roomArea
 
 room()
-room_4_area = area
+total_room_area = total_room_area + roomArea
 
-    
-
-
-
-total_room_area = room_1_area + room_2_area + room_3_area + room_4_area
+room()
+total_room_area = total_room_area + roomArea
 
 print("The total room area is: ", total_room_area)
 
