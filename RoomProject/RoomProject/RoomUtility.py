@@ -52,8 +52,6 @@ def triangleRoom(base, height):         #Used to define what the Triangle room a
     
 #--------------------USER INPUT--------------------
 
-print("What shape do you want Room to be?\n")
-#Room 1 Segment
 
         
 
