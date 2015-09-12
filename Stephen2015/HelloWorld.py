@@ -5,11 +5,12 @@ Created on Sep 10, 2015
 '''
 
 def fuckyou():
-    print("My mommy likes it well done.")
-    print("            -Stephen\n")
+    x=0
+    while x<20: 
+        print("Kindly, Go Fuck Yourself")
+        print("            -Stephen\n")
     
-def die():
-    print("die")
+
     
     
 
