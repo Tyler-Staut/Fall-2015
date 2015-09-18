@@ -23,7 +23,7 @@ def squareRoom(base, height):
     
 #Used to define what the SemiCircle room area is   
 def semicircleRoom(radius):
-    roomArea = (pi(radius)**2) / 4
+    roomArea = (pi*(radius)**2) / 4
     return roomArea
     
 #Used to define what the Triangle room area is 
@@ -66,7 +66,6 @@ def room():
                 height = float(input("Height: "))
                 roomArea = triangleRoom(base, height)
                 roomAreas.append(roomArea)
-                
                 
             break
         else:
