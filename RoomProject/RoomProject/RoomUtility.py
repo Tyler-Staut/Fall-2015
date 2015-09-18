@@ -58,7 +58,6 @@ def room():
             elif room == 'SemiCircle':                     #If SemiCircle do:
                 radius = float(input("Radius: "))
                 roomArea = semicircleRoom(radius)
-                total_room_area = total_room_area + roomArea
                 roomAreas.append(roomArea)
                 
                 
@@ -66,7 +65,6 @@ def room():
                 base = float(input("Base: "))
                 height = float(input("Height: "))
                 roomArea = triangleRoom(base, height)
-                total_room_area = total_room_area + roomArea
                 roomAreas.append(roomArea)
                 
                 
