@@ -86,5 +86,6 @@ x = 1
 for i in range(numRooms):
     print("Room %d is:" % x, roomAreas[i])
     x = x + 1
+print("The total room area is: "sum(roomAreas))
 
 
