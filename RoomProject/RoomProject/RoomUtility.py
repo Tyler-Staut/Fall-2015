@@ -8,13 +8,12 @@ from math import *
 
 
 
-#Needed to define area
-area = 0
-total_room_area = 0
-roomArea = 0
+#------LISTS-----
+roomAreas = []
+#----------------
 
 
-
+numRooms = int(input("How many rooms do you want to have? "))
 
 #Used to define what the Square room area is
 def squareRoom(base, height):
@@ -51,22 +50,24 @@ def room():
                 base = float(input("Base: "))
                 height = float(input("Height: "))
                 roomArea = squareRoom(base, height)
-                print(roomArea)
-                return roomArea
+                roomAreas.append(roomArea)
                 
                 
                 
-            elif room1 == 'SemiCircle':                     #If SemiCircle do:
+                
+            elif room == 'SemiCircle':                     #If SemiCircle do:
                 radius = float(input("Radius: "))
                 roomArea = semicircleRoom(radius)
                 total_room_area = total_room_area + roomArea
+                roomAreas.append(roomArea)
                 
                 
-            elif room1 == 'Triangle':                       #If Triangle do:
+            elif room == 'Triangle':                       #If Triangle do:
                 base = float(input("Base: "))
                 height = float(input("Height: "))
                 roomArea = triangleRoom(base, height)
                 total_room_area = total_room_area + roomArea
+                roomAreas.append(roomArea)
                 
                 
             break
@@ -77,18 +78,16 @@ def room():
         
 #--------------------------------------------------
 
-room()
-total_room_area = total_room_area + roomArea
+def runProgram():
+    for i in range(numRooms):
+        room()
+        
+runProgram()
 
-room()
-total_room_area = total_room_area + roomArea
-
-room()
-total_room_area = total_room_area + roomArea
-
-room()
-total_room_area = total_room_area + roomArea
-
-print("The total room area is: ", total_room_area)
+print("The total area in each room is as follows: ")
+x = 1
+for i in range(numRooms):
+    print("Room %d is:" % x, roomAreas[i])
+    x = x + 1
 
 
