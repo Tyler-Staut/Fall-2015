@@ -45,8 +45,8 @@ def room():
         
         print("What shape do you want this room to be?\n")  #Asks what room you want
         room = str(input("Response: "))
-        if room in ('Square', 'SemiCircle', 'Triangle'):    #If room is in set then do the following
-            if room == 'Square':                            #If square do:
+        if room.lower() in ('square', 'semicircle', 'triangle'):    #If room is in set then do the following
+            if room.lower() == 'square':                            #If square do:
                 base = float(input("Base: "))
                 height = float(input("Height: "))
                 roomArea = squareRoom(base, height)
@@ -55,13 +55,13 @@ def room():
                 
                 
                 
-            elif room == 'SemiCircle':                     #If SemiCircle do:
+            elif room.lower() == 'semicircle':                     #If SemiCircle do:
                 radius = float(input("Radius: "))
                 roomArea = semicircleRoom(radius)
                 roomAreas.append(roomArea)
                 
                 
-            elif room == 'Triangle':                       #If Triangle do:
+            elif room.lower() == 'triangle':                       #If Triangle do:
                 base = float(input("Base: "))
                 height = float(input("Height: "))
                 roomArea = triangleRoom(base, height)
@@ -86,6 +86,6 @@ x = 1
 for i in range(numRooms):
     print("Room %d is:" % x, roomAreas[i])
     x = x + 1
-print("The total room area is: "sum(roomAreas))
+print("The total room area is: ", sum(roomAreas))
 
 
