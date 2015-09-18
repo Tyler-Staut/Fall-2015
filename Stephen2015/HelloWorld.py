@@ -7,8 +7,8 @@ Created on Sep 10, 2015
 def fuckyou():
     x=0
     while x<20: 
-        print("Kindly, Go Fuck Yourself")
-        print("            -Stephen\n")
+        print("My mommy likes it well done!")
+        print("            With Love, Stephen\n")
     
 
     
