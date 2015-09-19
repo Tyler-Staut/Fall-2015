@@ -7,7 +7,6 @@ Created on Sep 10, 2015
 from math import *
 
 
-
 #------LISTS-----
 roomAreas = []
 #----------------
