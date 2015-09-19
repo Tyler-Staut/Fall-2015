@@ -31,7 +31,7 @@ def triangleRoom(base, height):
     roomArea = (base * height) / 2
     return roomArea
     
-#Used to define the different rooms
+
 
 
 
@@ -46,7 +46,7 @@ def room():
         room = str(input("Response: "))
         if room.lower() in ('square', 'semicircle', 'triangle'):    #If room is in set then do the following
             if room.lower() == 'square':                            #If square do:
-                roomTypes.append(Square)    #Used to make the room type
+                roomTypes.append('Square')    #Used to make the room type
                 base = float(input("Base: "))
                 height = float(input("Height: "))
                 roomArea = squareRoom(base, height)
@@ -54,14 +54,14 @@ def room():
                 
                 
             elif room.lower() == 'semicircle':                     #If SemiCircle do:
-                roomTypes.append(SemiCircle)
+                roomTypes.append('SemiCircle')
                 radius = float(input("Radius: "))
                 roomArea = semicircleRoom(radius)
                 roomAreas.append(roomArea)
                 
                 
             elif room.lower() == 'triangle':                       #If Triangle do:
-                roomTypes.append(Triangle)
+                roomTypes.append('Triangle')
                 base = float(input("Base: "))
                 height = float(input("Height: "))
                 roomArea = triangleRoom(base, height)
