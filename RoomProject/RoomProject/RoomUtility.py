@@ -9,6 +9,7 @@ from math import *
 
 
 #------LISTS-----
+roomTypes = []
 roomAreas = []
 #----------------
 
@@ -47,6 +48,7 @@ def room():
         room = str(input("Response: "))
         if room.lower() in ('square', 'semicircle', 'triangle'):    #If room is in set then do the following
             if room.lower() == 'square':                            #If square do:
+                roomTypes.append(Square)
                 base = float(input("Base: "))
                 height = float(input("Height: "))
                 roomArea = squareRoom(base, height)
@@ -56,12 +58,14 @@ def room():
                 
                 
             elif room.lower() == 'semicircle':                     #If SemiCircle do:
+                roomTypes.append(SemiCircle)
                 radius = float(input("Radius: "))
                 roomArea = semicircleRoom(radius)
                 roomAreas.append(roomArea)
                 
                 
             elif room.lower() == 'triangle':                       #If Triangle do:
+                roomTypes.append(Triangle)
                 base = float(input("Base: "))
                 height = float(input("Height: "))
                 roomArea = triangleRoom(base, height)
