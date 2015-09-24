@@ -15,6 +15,7 @@ choice = int(input("Would you like to see this area drawn out? Enter 1 for yes, 
 if choice == 1:
     turtle.showturtle()
     turtle.color("Blue")
+    turtle.pensize(5)
     turtle.penup()
     turtle.setpos((-1/2)*b, (-1/2)*a)
     turtle.pendown()
