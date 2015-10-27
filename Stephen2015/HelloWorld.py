@@ -10,7 +10,7 @@ def fuckyou():
         print("My mommy likes it well done!")
         print("            With Love, Stephen\n")
         x = x+1
-        break
+        
     
     while x >= 20:
         print("Fuck you")
