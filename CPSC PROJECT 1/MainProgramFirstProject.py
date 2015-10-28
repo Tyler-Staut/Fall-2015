@@ -55,6 +55,42 @@ class ComputerScienceOne_MWF_10AM():
             print("{:<15} {:<15} {}".format(fields[1].strip(), fields[2].strip(), fields[0].strip()))
         myfile.close()
         
+        
+        
+    def Top10WithMostPeople(self):
+        pass
+    
+    def PercentageOldPweps(self):
+        pass
+    
+    def MaleToFemaleXLR(self):
+        pass
+    
+    def NoChildren(self):
+        pass
+    
+    def SameMaleFemale(self):
+        pass
+    
+    def MoreOfOneOrAnother(self):
+        pass
+    
+    def allData(self):      #Moving over to menu definition so that the code will work better.
+        print("Choose an age range.")
+        print("1: Ages 0-14")
+        print("2: Ages 15-64")
+        print("3: Ages 64+")
+        choice = int(input("Choose an Option: "))
+        while choice not in (1,2,3):
+            choice = int(input("Choose an Option: "))
+            
+        if choice == 1:
+            T.Kid()
+        elif choice == 2:
+            T.Adult()
+        elif choice == 3:
+            T.Senior()
+        
 T = ComputerScienceOne_MWF_10AM()
 
 
@@ -86,24 +122,10 @@ def menu():
     elif choice == 6:       #Higher Males to Females and Higher Females to Males
         pass
     elif choice == 7:       #List all Data from File
-        allData()
+        T.allData()
     
     
-def allData():      #Moving over to menu definition so that the code will work better.
-    print("Choose an age range.")
-    print("1: Ages 0-14")
-    print("2: Ages 15-64")
-    print("3: Ages 64+")
-    choice = int(input("Choose an Option: "))
-    while choice not in (1,2,3):
-        choice = int(input("Choose an Option: "))
-        
-    if choice == 1:
-        T.Kid()
-    elif choice == 2:
-        T.Adult()
-    elif choice == 3:
-        T.Senior()
+
     
 def main():  
     start = 0
