@@ -59,20 +59,49 @@ def menu():
     print("Option 6: Higher Males to Females and Higher Females to Males")
     print("Option 7: List all Data from File")
     choice = int(input("Choose an Option: "))
+    while choice not in range(1,8):
+        choice = int(input("Choose an Option: "))
+        
+    if choice == 1:
+        pass
+    elif choice == 2:
+        pass
+    elif choice == 3:
+        pass
+    elif choice == 4:
+        pass
+    elif choice == 5:
+        pass
+    elif choice == 6:
+        pass
+    elif choice == 7:
+        allData()
     
     
-    
-def subMenu():
+def allData():      #Moving over to menu definition so that the code will work better.
     print("Choose an age range.")
     print("1: Ages 0-14")
     print("2: Ages 15-64")
     print("3: Ages 64+")
     choice = int(input("Choose an Option: "))
+    while choice not in (1,2,3):
+        choice = int(input("Choose an Option: "))
+        
+    if choice == 1:
+        T.Kid()
+    elif choice == 2:
+        T.Adult()
+    elif choice == 3:
+        T.Senior()
     
-def main():
-    x = menu()
-    y = subMenu()
+def main():  
+    start = 0
     
+    while start != 8:
+        menu()
+        
+        
+        
     
     
     
