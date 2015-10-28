@@ -32,7 +32,7 @@ class ThatSecondWhenYouAreOnJohnCenasBackAndYouDontKnowIfHeIsGoingToDropYou():
         myfile.close()
         
         
-    def JohnCena(self):
+    def Senior(self):
         myfile = open("WorldCensusAges64+.csv")
         count = 0
         for line in myfile:
