@@ -12,7 +12,7 @@ def fuckyou():
         x = x+1
         break
     
-    while x >= 20:
+    while x >= 20 and x <=30:
         print("Fuck you")
     
     
