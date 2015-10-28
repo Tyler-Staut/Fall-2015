@@ -1,7 +1,17 @@
-#Author: Tyler R. Staut
+#Authors: Tyler Staut - Matthew Bowen - Dean Debois
 #File Name: FileExample.py
 #Date: Oct 21, 2015
 #Description: Example
+
+#-----IMPORTS-----#
+
+#-----------------#
+
+#-----LISTS-----#
+
+
+
+#---------------#
 
 class ThatSecondWhenYouAreOnJohnCenasBackAndYouDontKnowIfHeIsGoingToDropYou():
     def Kid(self):
@@ -59,22 +69,23 @@ def menu():
     print("Option 6: Higher Males to Females and Higher Females to Males")
     print("Option 7: List all Data from File")
     choice = int(input("Choose an Option: "))
+    
     while choice not in range(1,8):
         choice = int(input("Choose an Option: "))
         
-    if choice == 1:
+    if choice == 1:         #Top 10 Countries with the most people
         pass
-    elif choice == 2:
+    elif choice == 2:       #Percentage of Old People
         pass
-    elif choice == 3:
+    elif choice == 3:       #Males to Females Percentage
         pass
-    elif choice == 4:
+    elif choice == 4:       #Countries with Least amount of Children
         pass
-    elif choice == 5:
+    elif choice == 5:       #Countries with similar Male to Female ratios
         pass
-    elif choice == 6:
+    elif choice == 6:       #Higher Males to Females and Higher Females to Males
         pass
-    elif choice == 7:
+    elif choice == 7:       #List all Data from File
         allData()
     
     
