@@ -13,7 +13,7 @@
 
 #---------------#
 
-class ThatSecondWhenYouAreOnJohnCenasBackAndYouDontKnowIfHeIsGoingToDropYou():
+class ComputerScienceOne_MWF_10AM():
     def Kid(self):
         myfile = open("WorldCensusAges0-14.csv")
         count = 0
