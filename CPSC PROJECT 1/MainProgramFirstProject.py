@@ -55,7 +55,7 @@ class ComputerScienceOne_MWF_10AM():
             print("{:<15} {:<15} {}".format(fields[1].strip(), fields[2].strip(), fields[0].strip()))
         myfile.close()
         
-T = ThatSecondWhenYouAreOnJohnCenasBackAndYouDontKnowIfHeIsGoingToDropYou()
+T = ComputerScienceOne_MWF_10AM()
 
 
 def menu():
