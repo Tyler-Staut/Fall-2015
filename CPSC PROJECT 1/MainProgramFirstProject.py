@@ -90,6 +90,7 @@ class ComputerScienceOne_MWF_10AM():
             T.Adult()
         elif choice == 3:
             T.Senior()
+        #------------------------------------------------------------------------------#
         
 T = ComputerScienceOne_MWF_10AM()
 
@@ -134,10 +135,7 @@ def main():
         menu()
         
         
-        
-    
-    
-    
+
 main()
 
         
