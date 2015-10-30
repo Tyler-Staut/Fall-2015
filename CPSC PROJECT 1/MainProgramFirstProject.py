@@ -20,11 +20,11 @@ class ComputerScienceOne_MWF_10AM():
         for line in myfile:
             count += 1
             fields = (line.split(","))
-            if ((count % 10) == 0) or (count == 1):
-                print("#-----------------------------------------------------------#")
-                print("# {:<15} {:<15} {:<25} #".format("Boys:", "Girls:", "Country:"))
-                print("#-----------------------------------------------------------#")
-            print("{:<15} {:<15} {}".format(fields[1].strip(), fields[2].strip(), fields[0].strip()))
+            if ((count % 20) == 0) or (count == 1):
+                print("#--------------------------------------------------------------#")
+                print("# {:<28}      {:<15} {:<10} #".format("Country:", "Boys:", "Girls:"))
+                print("#--------------------------------------------------------------#")
+            print("  {:<28}      {:<15} {:<10}  ".format(fields[0].strip(), fields[1].strip(), fields[2].strip()))
         myfile.close()
         
         
@@ -34,11 +34,11 @@ class ComputerScienceOne_MWF_10AM():
         for line in myfile:
             count += 1
             fields = (line.split(","))
-            if ((count % 10) == 0) or (count == 1):
-                print("#-----------------------------------------------------------#")
-                print("# {:<15} {:<15} {:<25} #".format("Boys:", "Girls:", "Country:"))
-                print("#-----------------------------------------------------------#")
-            print("{:<15} {:<15} {}".format(fields[1].strip(), fields[2].strip(), fields[0].strip()))
+            if ((count % 20) == 0) or (count == 1):
+                print("#--------------------------------------------------------------#")
+                print("# {:<28}      {:<15} {:<10} #".format("Country:", "Boys:", "Girls:"))
+                print("#--------------------------------------------------------------#")
+            print("  {:<28}      {:<15} {:<10}  ".format(fields[0].strip(), fields[1].strip(), fields[2].strip()))
         myfile.close()
         
         
@@ -48,11 +48,11 @@ class ComputerScienceOne_MWF_10AM():
         for line in myfile:
             count += 1
             fields = (line.split(","))
-            if ((count % 10) == 0) or (count == 1):
-                print("#-----------------------------------------------------------#")
-                print("# {:<15} {:<15} {:<25} #".format("Boys:", "Girls:", "Country:"))
-                print("#-----------------------------------------------------------#")
-            print("{:<15} {:<15} {}".format(fields[1].strip(), fields[2].strip(), fields[0].strip()))
+            if ((count % 20) == 0) or (count == 1):
+                print("#--------------------------------------------------------------#")
+                print("# {:<28}      {:<15} {:<10} #".format("Country:", "Boys:", "Girls:"))
+                print("#--------------------------------------------------------------#")
+            print("  {:<28}      {:<15} {:<10}  ".format(fields[0].strip(), fields[1].strip(), fields[2].strip()))
         myfile.close()
         
     #------------------------------------------------------------------------------#
