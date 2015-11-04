@@ -26,7 +26,7 @@ class MainFunctions():
     
     SortedByMales = []
     #LISTS
-    
+    SortedTop = []
     def Kid(self):
         myfile = open("WorldCensusAges0-14.csv")
         count = 0
@@ -117,11 +117,22 @@ class MainFunctions():
             sum += int(T.PopMales3[i])
             T.TotalPopMales.append(sum)
             sum = 0
-            
+        
+        for i in range(len(T.TotalPopFemales)):
+            sum = int(T.TotalPopFemales[i])
+            sum += int(T.TotalPopMales[i])
+            T.SortedTop.append(sum)
+            sum = 0
+          
+        #-----------SORTED BY ALL------------#
+        T.SortedAll = list(zip(T.ListOfCountries, T.TotalPopMales, T.TotalPopFemales))  
         #-----------SORTED BY MALES----------#
-        T.SortedAll = list(zip(T.ListOfCountries, T.TotalPopMales, T.TotalPopFemales))
         T.SortedByMales = sorted(T.SortedAll, key=itemgetter(1))
         T.SortedByMales.reverse()
+        #-----------SORTED BY TOP------------#
+        T.SortedByTop = list(zip(T.ListOfCountries, T.SortedTop))
+        T.SortedByTop = sorted(T.SortedByTop, key= itemgetter(1))
+        T.SortedByTop.reverse()
         
         #-----CLOSES FILES-----#
         KidFile.close()
@@ -167,7 +178,12 @@ class MainFunctions():
                      
                      
     def Option4(self):  #Top 10 Countries with the most people
-        pass
+        print("#--------------------------------------------------------------#")
+        print("# {:<28}      {:<15} {:<10} #".format("Country:", "Boys:", "Girls:"))
+        print("#--------------------------------------------------------------#")       
+        for country in range(10):
+            if T.SortedByTop[country][0]:
+                print("  {:<28}      {:<15}".format(T.SortedByTop[country][0], T.SortedByTop[country][1]))
     
     def Option5(self):  #Percentage of Old People
         OldPeople = []
@@ -187,6 +203,7 @@ class MainFunctions():
                 print("# {:<28}      {:<15} {:<10} #".format("Country:", "Total:", "Old People %:"))
                 print("#-----------------------------------------------------------------#")
             print("  {:<28}      {:<15} {:<10}  ".format(T.SortedAll[z][0], (T.TotalPopFemales[z] + T.TotalPopMales[z]), OldRatio[z]))
+    
     def Option6(self):  #Males to Females Percentage
         pass
     
