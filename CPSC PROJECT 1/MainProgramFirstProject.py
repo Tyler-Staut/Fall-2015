@@ -8,12 +8,23 @@
 #-----------------#
 
 #-----LISTS-----#
-ListOfCountries = []
-TotalPopFemales = []
-TotalPopMales = []
+
 #---------------#
 
-class SpecificFileData():
+class MainFunctions():
+    #LISTS
+    ListOfCountries = []
+    PopFemales1 = []
+    PopMales1 = []
+    PopFemales2 = []
+    PopMales2 = []
+    PopFemales3 = []
+    PopMales3 = []
+    
+    TotalPopFemales = []
+    TotalPopMales = []
+    #LISTS
+    
     def Kid(self):
         myfile = open("WorldCensusAges0-14.csv")
         count = 0
@@ -55,20 +66,21 @@ class SpecificFileData():
             print("  {:<28}      {:<15} {:<10}  ".format(fields[0].strip(), fields[1].strip(), fields[2].strip()))
         myfile.close()
         
-    #------------------------------------------------------------------------------#
-
-class MainFunctions():    
-    def Option1(self):  #All countries with all population
-        ListOfCountries = []
-        PopFemales1 = []
-        PopMales1 = []
-        PopFemales2 = []
-        PopMales2 = []
-        PopFemales3 = []
-        PopMales3 = []
+    def openFile(self):
+        #-----OPENS FILES-----#
+        KidFile = open("WorldCensusAges0-14.csv")
+        AdultFile = open("WorldCensusAges15-64.csv")
+        SeniorFile = open("WorldCensusAges64+.csv")
+        #---------------------#
+    
+    def closeFile(self):
+        #-----CLOSES FILES-----#
+        KidFile.close()
+        AdultFile.close()
+        SeniorFile.close()
+        #----------------------#
         
-        TotalPopFemales = []
-        TotalPopMales = []
+    def createLists(self):
         #-----OPENS FILES-----#
         KidFile = open("WorldCensusAges0-14.csv")
         AdultFile = open("WorldCensusAges15-64.csv")
@@ -76,32 +88,53 @@ class MainFunctions():
         #---------------------#
         for line in KidFile:    #Sets up the lists
             fields = (line.split(","))
-            ListOfCountries.append(fields[0].strip())
-            PopMales1.append(fields[1].strip())
-            PopFemales1.append(fields[2].strip())
+            T.ListOfCountries.append(fields[0].strip())
+            T.PopMales1.append(fields[1].strip())
+            T.PopFemales1.append(fields[2].strip())
         
         for line in AdultFile:
             fields = (line.split(","))
-            PopMales2.append(fields[1].strip())
-            PopFemales2.append(fields[2].strip())
+            T.PopMales2.append(fields[1].strip())
+            T.PopFemales2.append(fields[2].strip())
             
         for line in SeniorFile:
             fields = (line.split(","))
-            PopMales3.append(fields[1].strip())
-            PopFemales3.append(fields[2].strip())
+            T.PopMales3.append(fields[1].strip())
+            T.PopFemales3.append(fields[2].strip())
             
-        for amount in PopFemales1:
-            TotalPopFemales.append(PopFemales1[amount].slice()+PopFemales2[amount].slice()+PopFemales3[amount].slice())
+        for i in range(len(T.PopFemales1)):
+            sum = int(T.PopFemales1[i])
+            sum += int(T.PopFemales2[i])
+            sum += int(T.PopFemales3[i])
+            T.TotalPopFemales.append(sum)
+            sum = 0
         
-        for amount in PopMales1:
-            TotalPopMales.append(PopMales1[amount].slice()+PopMales2[amount].slice()+PopMales3[amount].slice())
-        
-        print(TotalPopFemales)
-        
+        for i in range(len(T.PopMales1)):
+            sum = int(T.PopMales1[i])
+            sum += int(T.PopMales2[i])
+            sum += int(T.PopMales3[i])
+            T.TotalPopMales.append(sum)
+            sum = 0
+        #-----CLOSES FILES-----#
         KidFile.close()
         AdultFile.close()
         SeniorFile.close()
-                
+        #----------------------#
+        
+    #------------------------------------------------------------------------------#
+
+   
+    def Option1(self):  #All countries with all population
+        
+        T.createLists()
+        count = 0
+        for country in range(len(T.ListOfCountries)):
+            count += 1
+            if ((count % 20) == 0) or (count == 0):
+                print("#--------------------------------------------------------------#")
+                print("# {:<28}      {:<15} {:<10} #".format("Country:", "Boys:", "Girls:"))
+                print("#--------------------------------------------------------------#")
+            print("  {:<28}      {:<15} {:<10}  ".format(T.ListOfCountries[country], T.TotalPopMales[country], T.TotalPopFemales[country]))
     
     def Option2(self):  #More Males than Females
         pass
@@ -145,8 +178,7 @@ class MainFunctions():
         #------------------------------------------------------------------------------#
         
 #----------CLASS ASSIGNMENT----------#
-T = SpecificFileData() #First Class
-M = MainFunctions() #Main Class of functions
+T = MainFunctions() #Main Class of functions
 #------------------------------------#
 
 
@@ -170,25 +202,25 @@ def menu():
         choice = int(input("Choose an Option: "))
         
     if choice == 1:         #All Countries with All Population
-        M.Option1()
-    elif choice == 2:       #More Males than Females
-        M.Option2()
+        T.Option1()
+    elif choice == 2:       #Tore Tales than Females
+        T.Option2()
     elif choice == 3:       #Population by Letter
-        M.Option3()
+        T.Option3()
     elif choice == 4:       #Top 10 Countries with the most people
-        M.Option4()
+        T.Option4()
     elif choice == 5:       #Percentage of Old People
-        M.Option5()
-    elif choice == 6:       #Males to Females Percentage
-        M.Option6()
+        T.Option5()
+    elif choice == 6:       #Tales to Females Percentage
+        T.Option6()
     elif choice == 7:       #Countries with Least amount of Children
-        M.Option7()
-    elif choice == 8:       #Countries with similar Male to Female ratios
-        M.Option8()
-    elif choice == 9:       #Higher Female to Male ratio
-        M.Option9()
+        T.Option7()
+    elif choice == 8:       #Countries with similar Tale to Female ratios
+        T.Option8()
+    elif choice == 9:       #Higher Female to Tale ratio
+        T.Option9()
     elif choice == 10:      #List all Data from File
-        M.Option10()
+        T.Option10()
     elif choice == 11:      #Quit
         return 11
     
