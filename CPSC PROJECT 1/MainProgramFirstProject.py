@@ -48,7 +48,7 @@ class ComputerScienceOne_MWF_10AM():
         for line in myfile:
             count += 1
             fields = (line.split(","))
-            if ((count % 20) == 0) or (count == 1):
+            if ((count % 20) == 0) or (count == 0):
                 print("#--------------------------------------------------------------#")
                 print("# {:<28}      {:<15} {:<10} #".format("Country:", "Boys:", "Girls:"))
                 print("#--------------------------------------------------------------#")
@@ -98,32 +98,43 @@ T = ComputerScienceOne_MWF_10AM()
 def menu():
     print("Choose an option that you want to view based on document.")
     
-    print("Option 1: Top 10 Countries with the most people")    #Sub option would determine which file to display
-    print("Option 2: Percentage of Old People")
-    print("Option 3: Males to Females Percentage")
-    print("Option 4: Countries with Least amount of Children")
-    print("Option 5: Countries with similar Male to Female ratios")
-    print("Option 6: Higher Males to Females and Higher Females to Males")
-    print("Option 7: List all Data from File")
+    print("Option 1: All Countries with All Population")    
+    print("Option 2: More Males than Females")
+    print("Option 3: Population by Letter")
+    print("Option 4: Top 10 Countries with the most people")    #Sub option would determine which file to display
+    print("Option 5: Percentage of Old People")
+    print("Option 6: Males to Females Percentage")
+    print("Option 7: Countries with Least amount of Children")
+    print("Option 8: Countries with similar Male to Female ratios")
+    print("Option 9: Higher Female to Male ratio")
+    print("Option 10: List all Data from File")
     choice = int(input("Choose an Option: "))
     
-    while choice not in range(1,8):
+    while choice not in range(1,12):
         choice = int(input("Choose an Option: "))
         
-    if choice == 1:         #Top 10 Countries with the most people
+    if choice == 1:         #All Countries with All Population
         pass
-    elif choice == 2:       #Percentage of Old People
+    elif choice == 2:       #More Males than Females
         pass
-    elif choice == 3:       #Males to Females Percentage
+    elif choice == 3:       #Population by Letter
         pass
-    elif choice == 4:       #Countries with Least amount of Children
+    elif choice == 4:       #Top 10 Countries with the most people
         pass
-    elif choice == 5:       #Countries with similar Male to Female ratios
+    elif choice == 5:       #Percentage of Old People
         pass
-    elif choice == 6:       #Higher Males to Females and Higher Females to Males
+    elif choice == 6:       #Males to Females Percentage
         pass
-    elif choice == 7:       #List all Data from File
+    elif choice == 7:       #Countries with Least amount of Children
+        pass
+    elif choice == 8:       #Countries with similar Male to Female ratios
+        pass
+    elif choice == 9:       #Higher Female to Male ratio
+        pass
+    elif choice == 10:      #List all Data from File
         T.allData()
+    elif choice == 11:      #Quit
+        break
     
     
 
