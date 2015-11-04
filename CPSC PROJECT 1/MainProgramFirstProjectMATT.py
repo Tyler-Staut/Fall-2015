@@ -155,15 +155,15 @@ class MainFunctions():
             
     def Option3(self):  #Population by Letter
         count = 0
-        Letter = input("What letter would you like to search for? ")            
+        Letter = input("What letter would you like to search for? ")     
+        print("#--------------------------------------------------------------#")
+        print("# {:<28}      {:<15} {:<10} #".format("Country:", "Boys:", "Girls:"))
+        print("#--------------------------------------------------------------#")       
         for country in range(len(T.ListOfCountries)):
             count += 1
             if T.ListOfCountries[country][0] == Letter:
                 print(T.SortedAll[country])
-        print("#--------------------------------------------------------------#")
-        print("# {:<28}      {:<15} {:<10} #".format("Country:", "Boys:", "Girls:"))
-        print("#--------------------------------------------------------------#")
-     
+                     
     def Option4(self):  #Top 10 Countries with the most people
         pass
     
