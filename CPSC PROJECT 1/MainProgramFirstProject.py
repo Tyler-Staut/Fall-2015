@@ -2,6 +2,7 @@
 #File Name: MainProgramCPSC1-FirstProject.py
 #Date: Oct 21, 2015
 #Description: Program that will gather data from 3 files and calculate and display information from them.
+from _operator import itemgetter
 
 #-----IMPORTS-----#
 
@@ -23,6 +24,8 @@ class MainFunctions():
     
     TotalPopFemales = []
     TotalPopMales = []
+    
+    SortedByMales = []
     #LISTS
     
     def Kid(self):
@@ -115,6 +118,12 @@ class MainFunctions():
             sum += int(T.PopMales3[i])
             T.TotalPopMales.append(sum)
             sum = 0
+            
+        #-----------SORTED BY MALES----------#
+        ZippedThingy = list(zip(T.TotalPopMales, T.TotalPopFemales ,T.ListOfCountries))
+        for i in range(len(T.TotalPopMales)):
+            T.SortedByMales = ZippedThingy[i]
+        
         #-----CLOSES FILES-----#
         KidFile.close()
         AdultFile.close()
@@ -135,8 +144,16 @@ class MainFunctions():
             print("  {:<28}      {:<15} {:<10}  ".format(T.ListOfCountries[country], T.TotalPopMales[country], T.TotalPopFemales[country]))
     
     def Option2(self):  #More Males than Females
-        pass
-    
+        count = 0
+        for country in range(len(T.ListOfCountries)):
+            count += 1
+            if ((count % 20) == 0) or (count == 0):
+                print("#--------------------------------------------------------------#")
+                print("# {:<28}      {:<15} {:<10} #".format("Country:", "Boys:", "Girls:"))
+                print("#--------------------------------------------------------------#")
+            print("  {:<28}      {:<15} {:<10}  ".format(T.SortedByMales[2], T.SortedByMales[1], T.SortedByMales[0]))
+            
+            
     def Option3(self):  #Population by Letter
         pass
      
