@@ -13,7 +13,7 @@
 
 #---------------#
 
-class ComputerScienceOne_MWF_10AM():
+class ThreeFiles():
     def Kid(self):
         myfile = open("WorldCensusAges0-14.csv")
         count = 0
@@ -56,14 +56,15 @@ class ComputerScienceOne_MWF_10AM():
         myfile.close()
         
     #------------------------------------------------------------------------------#
-        
+
+class MainFunctions():     
     def Top10WithMostPeople(self):
         pass
     
     def PercentageOldGeezers(self):
         pass
     
-    def MaleToFemaleXLRcable(self):
+    def MaleToFemaleXLRcable(self): #Got bored with the simple names, and I had an XLR cable next to me
         pass
     
     def NoChildren(self):
@@ -92,7 +93,9 @@ class ComputerScienceOne_MWF_10AM():
             T.Senior()
         #------------------------------------------------------------------------------#
         
-T = ComputerScienceOne_MWF_10AM()
+T = ThreeFiles() #First Class
+M = MainFunctions()
+
 
 
 def menu():
@@ -132,7 +135,7 @@ def menu():
     elif choice == 9:       #Higher Female to Male ratio
         pass
     elif choice == 10:      #List all Data from File
-        T.allData()
+        M.allData()
     elif choice == 11:      #Quit
         break
     
