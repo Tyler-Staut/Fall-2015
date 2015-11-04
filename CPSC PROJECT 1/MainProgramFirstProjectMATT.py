@@ -155,7 +155,8 @@ class MainFunctions():
             
     def Option3(self):  #Population by Letter
         count = 0
-        Letter = input("What letter would you like to search for? ")     
+        Letter = input("What letter would you like to search for? ")
+        Letter = Letter.upper()
         print("#--------------------------------------------------------------#")
         print("# {:<28}      {:<15} {:<10} #".format("Country:", "Boys:", "Girls:"))
         print("#--------------------------------------------------------------#")       
