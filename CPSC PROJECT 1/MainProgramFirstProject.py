@@ -2,7 +2,7 @@
 #File Name: MainProgramCPSC1-FirstProject.py
 #Date: Oct 21, 2015
 #Description: Program that will gather data from 3 files and calculate and display information from them.
-from _operator import itemgetter
+
 
 #-----IMPORTS-----#
 
@@ -120,9 +120,8 @@ class MainFunctions():
             sum = 0
             
         #-----------SORTED BY MALES----------#
-        ZippedThingy = list(zip(T.TotalPopMales, T.TotalPopFemales ,T.ListOfCountries))
-        for i in range(len(T.TotalPopMales)):
-            T.SortedByMales = ZippedThingy[i]
+        
+        
         
         #-----CLOSES FILES-----#
         KidFile.close()
@@ -151,8 +150,8 @@ class MainFunctions():
                 print("#--------------------------------------------------------------#")
                 print("# {:<28}      {:<15} {:<10} #".format("Country:", "Boys:", "Girls:"))
                 print("#--------------------------------------------------------------#")
-            print("  {:<28}      {:<15} {:<10}  ".format(T.SortedByMales[2], T.SortedByMales[1], T.SortedByMales[0]))
-            
+            #print("  {:<28}      {:<15} {:<10}  ".format(T.SortedByMales[2], T.SortedByMales[1], T.SortedByMales[0]))
+            print(T.SortedByMales)
             
     def Option3(self):  #Population by Letter
         pass
