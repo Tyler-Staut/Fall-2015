@@ -163,7 +163,7 @@ class MainFunctions():
         for country in range(len(T.ListOfCountries)):
             count += 1
             if T.ListOfCountries[country][0] == Letter:
-                print(T.SortedAll[country])
+                print("  {:<28}      {:<15} {:<10}  ".format(T.SortedByMales[country][0], T.SortedByMales[country][1], T.SortedByMales[country][2]))
                      
     def Option4(self):  #Top 10 Countries with the most people
         pass
