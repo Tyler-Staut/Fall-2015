@@ -3,9 +3,8 @@
 #Date: Oct 21, 2015
 #Description: Program that will gather data from 3 files and calculate and display information from them.
 
-
 #-----IMPORTS-----#
-
+from operator import itemgetter
 #-----------------#
 
 #-----LISTS-----#
@@ -121,7 +120,8 @@ class MainFunctions():
             
         #-----------SORTED BY MALES----------#
         T.SortedByMales = list(zip(T.ListOfCountries, T.TotalPopMales, T.TotalPopFemales))
-        
+        T.SortedByMales = sorted(T.SortedByMales, key=itemgetter(1))
+        T.SortedByMales.reverse()
         
         #-----CLOSES FILES-----#
         KidFile.close()
@@ -144,14 +144,15 @@ class MainFunctions():
     
     def Option2(self):  #More Males than Females
         count = 0
-        for country in range(len(T.ListOfCountries)):
+        for country in range(len(T.SortedByMales)):
             count += 1
-            if ((count % 20) == 0) or (count == 0):
+            if ((count % 20) == 0) or (count == 1):
                 print("#--------------------------------------------------------------#")
                 print("# {:<28}      {:<15} {:<10} #".format("Country:", "Boys:", "Girls:"))
                 print("#--------------------------------------------------------------#")
-            #print("  {:<28}      {:<15} {:<10}  ".format(T.SortedByMales[2], T.SortedByMales[1], T.SortedByMales[0]))
-            print(T.SortedByMales[6])
+            
+            print("  {:<28}      {:<15} {:<10}  ".format(T.SortedByMales[country][0], T.SortedByMales[country][1], T.SortedByMales[country][2]))
+            
             
     def Option3(self):  #Population by Letter
         pass
