@@ -119,8 +119,8 @@ class MainFunctions():
             sum = 0
             
         #-----------SORTED BY MALES----------#
-        T.SortedByMales = list(zip(T.ListOfCountries, T.TotalPopMales, T.TotalPopFemales))
-        T.SortedByMales = sorted(T.SortedByMales, key=itemgetter(1))
+        T.SortedAll = list(zip(T.ListOfCountries, T.TotalPopMales, T.TotalPopFemales))
+        T.SortedByMales = sorted(T.SortedAll, key=itemgetter(1))
         T.SortedByMales.reverse()
         
         #-----CLOSES FILES-----#
