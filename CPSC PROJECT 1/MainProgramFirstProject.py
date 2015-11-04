@@ -13,7 +13,7 @@
 
 #---------------#
 
-class ThreeFiles():
+class SpecificFileData():
     def Kid(self):
         myfile = open("WorldCensusAges0-14.csv")
         count = 0
@@ -58,34 +58,34 @@ class ThreeFiles():
     #------------------------------------------------------------------------------#
 
 class MainFunctions():    
-    def Option1(self):
+    def Option1(self):  #All countries with all population
         pass
     
-    def Option2(self):
+    def Option2(self):  #More Males than Females
         pass
     
-    def Option3(self):
+    def Option3(self):  #Population by Letter
         pass
      
-    def Option4(self):
+    def Option4(self):  #Top 10 Countries with the most people
         pass
     
-    def Option5(self):
+    def Option5(self):  #Percentage of Old People
         pass
     
-    def Option6(self): #Got bored with the simple names, and I had an XLR cable next to me
+    def Option6(self):  #Males to Females Percentage
         pass
     
-    def Option7(self):
+    def Option7(self):  #Countries with Least amount of Children
         pass
     
-    def Option8(self):
+    def Option8(self):  #Countries with similar Male to Female ratios
         pass
     
-    def Option9(self):
+    def Option9(self):  #Higher Female to Male ratio
         pass
     
-    def Option10(self):      #Moving over to menu definition so that the code will work better.
+    def Option10(self): #List all data from Specific file
         print("Choose an age range.")
         print("1: Ages 0-14")
         print("2: Ages 15-64")
@@ -102,9 +102,10 @@ class MainFunctions():
             T.Senior()
         #------------------------------------------------------------------------------#
         
-T = ThreeFiles() #First Class
-M = MainFunctions()
-
+#----------CLASS ASSIGNMENT----------#
+T = SpecificFileData() #First Class
+M = MainFunctions() #Main Class of functions
+#------------------------------------#
 
 
 def menu():
@@ -127,23 +128,23 @@ def menu():
         choice = int(input("Choose an Option: "))
         
     if choice == 1:         #All Countries with All Population
-        pass
+        M.Option1()
     elif choice == 2:       #More Males than Females
-        pass
+        M.Option2()
     elif choice == 3:       #Population by Letter
-        pass
+        M.Option3()
     elif choice == 4:       #Top 10 Countries with the most people
-        pass
+        M.Option4()
     elif choice == 5:       #Percentage of Old People
-        pass
+        M.Option5()
     elif choice == 6:       #Males to Females Percentage
-        pass
+        M.Option6()
     elif choice == 7:       #Countries with Least amount of Children
-        pass
+        M.Option7()
     elif choice == 8:       #Countries with similar Male to Female ratios
-        pass
+        M.Option8()
     elif choice == 9:       #Higher Female to Male ratio
-        pass
+        M.Option9()
     elif choice == 10:      #List all Data from File
         M.Option10()
     elif choice == 11:      #Quit
