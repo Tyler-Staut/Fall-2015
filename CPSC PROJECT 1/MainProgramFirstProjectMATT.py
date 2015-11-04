@@ -170,8 +170,22 @@ class MainFunctions():
         pass
     
     def Option5(self):  #Percentage of Old People
-        pass
-    
+        OldPeople = []
+        count1 = 0
+        for x in range(len(T.ListOfCountries)):
+            OldPeople.append(int(T.PopFemales3[x]) + int(T.PopMales3[x]))
+        OldRatio = []
+        for y in range(len(T.ListOfCountries)):
+            OldRatio.append(int(OldPeople[y])/(int(T.PopFemales3[y]) + int(T.PopMales3[y]) + int(T.PopFemales2[y]) + int(T.PopMales2[y]) + int(T.PopFemales1[y]) + int(T.PopMales1[y])))
+        for r in range (len(T.ListOfCountries)):
+            OldRatio[r] = round(OldRatio[r]*100, 2)
+        for z in range(len(T.ListOfCountries)):
+            count1 += 1
+            if ((count1 % 20) == 0) or (count1 == 0):
+                print("#-----------------------------------------------------------------#")
+                print("# {:<28}      {:<15} {:<10} #".format("Country:", "Total:", "Old People %:"))
+                print("#-----------------------------------------------------------------#")
+            print("  {:<28}      {:<15} {:<10}  ".format(T.SortedAll[z][0], (T.TotalPopFemales[z] + T.TotalPopMales[z]), OldRatio[z]))
     def Option6(self):  #Males to Females Percentage
         pass
     
