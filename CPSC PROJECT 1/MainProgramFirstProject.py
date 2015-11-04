@@ -1,7 +1,7 @@
 #Authors: Tyler Staut - Matthew Bowen - Dean Debois
 #File Name: MainProgramCPSC1-FirstProject.py
 #Date: Oct 21, 2015
-#Description: Example
+#Description: Program that will gather data from 3 files and calculate and display information from them.
 
 #-----IMPORTS-----#
 
@@ -148,16 +148,16 @@ def menu():
     elif choice == 10:      #List all Data from File
         M.Option10()
     elif choice == 11:      #Quit
-        break
+        return 11
     
     
 
     
-def main():  
+def main():
     start = 0
     
-    while start != 8:
-        menu()
+    while start != 11:
+        start = menu()
         
         
 
