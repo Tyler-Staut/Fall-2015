@@ -120,7 +120,7 @@ class MainFunctions():
             sum = 0
             
         #-----------SORTED BY MALES----------#
-        
+        T.SortedByMales = list(zip(T.ListOfCountries, T.TotalPopMales, T.TotalPopFemales))
         
         
         #-----CLOSES FILES-----#
