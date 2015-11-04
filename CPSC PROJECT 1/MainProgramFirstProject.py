@@ -57,26 +57,35 @@ class ThreeFiles():
         
     #------------------------------------------------------------------------------#
 
-class MainFunctions():     
-    def Top10WithMostPeople(self):
+class MainFunctions():    
+    def Option1(self):
         pass
     
-    def PercentageOldGeezers(self):
+    def Option2(self):
         pass
     
-    def MaleToFemaleXLRcable(self): #Got bored with the simple names, and I had an XLR cable next to me
+    def Option3(self):
+        pass
+     
+    def Option4(self):
         pass
     
-    def NoChildren(self):
+    def Option5(self):
         pass
     
-    def SameMaleFemale(self):
+    def Option6(self): #Got bored with the simple names, and I had an XLR cable next to me
         pass
     
-    def MoreOfOneOrAnother(self):
+    def Option7(self):
         pass
     
-    def allData(self):      #Moving over to menu definition so that the code will work better.
+    def Option8(self):
+        pass
+    
+    def Option9(self):
+        pass
+    
+    def Option10(self):      #Moving over to menu definition so that the code will work better.
         print("Choose an age range.")
         print("1: Ages 0-14")
         print("2: Ages 15-64")
@@ -111,6 +120,7 @@ def menu():
     print("Option 8: Countries with similar Male to Female ratios")
     print("Option 9: Higher Female to Male ratio")
     print("Option 10: List all Data from File")
+    print("Option 11: Quit Program")
     choice = int(input("Choose an Option: "))
     
     while choice not in range(1,12):
@@ -135,7 +145,7 @@ def menu():
     elif choice == 9:       #Higher Female to Male ratio
         pass
     elif choice == 10:      #List all Data from File
-        M.allData()
+        M.Option10()
     elif choice == 11:      #Quit
         break
     
