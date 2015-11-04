@@ -158,12 +158,11 @@ class MainFunctions():
         Letter = input("What letter would you like to search for? ")            
         for country in range(len(T.ListOfCountries)):
             count += 1
-            if T.ListOfCountries[[country][0]] == Letter:
-                print(T.ListOfCountries[country])
-            if ((count % 20) == 0) or (count == 0):
-                print("#--------------------------------------------------------------#")
-                print("# {:<28}      {:<15} {:<10} #".format("Country:", "Boys:", "Girls:"))
-                print("#--------------------------------------------------------------#")
+            if T.ListOfCountries[country][0] == Letter:
+                print(T.SortedAll[country])
+        print("#--------------------------------------------------------------#")
+        print("# {:<28}      {:<15} {:<10} #".format("Country:", "Boys:", "Girls:"))
+        print("#--------------------------------------------------------------#")
      
     def Option4(self):  #Top 10 Countries with the most people
         pass
