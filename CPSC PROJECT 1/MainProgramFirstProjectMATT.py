@@ -165,6 +165,7 @@ class MainFunctions():
             if T.ListOfCountries[country][0] == Letter:
                 print(T.SortedAll[country])
                      
+                     
     def Option4(self):  #Top 10 Countries with the most people
         pass
     
