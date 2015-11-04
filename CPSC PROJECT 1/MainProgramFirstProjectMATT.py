@@ -171,6 +171,7 @@ class MainFunctions():
     
     def Option5(self):  #Percentage of Old People
         OldPeople = []
+        
         count1 = 0
         for x in range(len(T.ListOfCountries)):
             OldPeople.append(int(T.PopFemales3[x]) + int(T.PopMales3[x]))
