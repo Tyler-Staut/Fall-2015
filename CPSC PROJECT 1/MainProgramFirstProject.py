@@ -8,9 +8,9 @@
 #-----------------#
 
 #-----LISTS-----#
-
-
-
+ListOfCountries = []
+TotalPopFemales = []
+TotalPopMales = []
 #---------------#
 
 class SpecificFileData():
@@ -59,7 +59,49 @@ class SpecificFileData():
 
 class MainFunctions():    
     def Option1(self):  #All countries with all population
-        pass
+        ListOfCountries = []
+        PopFemales1 = []
+        PopMales1 = []
+        PopFemales2 = []
+        PopMales2 = []
+        PopFemales3 = []
+        PopMales3 = []
+        
+        TotalPopFemales = []
+        TotalPopMales = []
+        #-----OPENS FILES-----#
+        KidFile = open("WorldCensusAges0-14.csv")
+        AdultFile = open("WorldCensusAges15-64.csv")
+        SeniorFile = open("WorldCensusAges64+.csv")
+        #---------------------#
+        for line in KidFile:    #Sets up the lists
+            fields = (line.split(","))
+            ListOfCountries.append(fields[0].strip())
+            PopMales1.append(fields[1].strip())
+            PopFemales1.append(fields[2].strip())
+        
+        for line in AdultFile:
+            fields = (line.split(","))
+            PopMales2.append(fields[1].strip())
+            PopFemales2.append(fields[2].strip())
+            
+        for line in SeniorFile:
+            fields = (line.split(","))
+            PopMales3.append(fields[1].strip())
+            PopFemales3.append(fields[2].strip())
+            
+        for amount in PopFemales1:
+            TotalPopFemales.append(PopFemales1[amount].slice()+PopFemales2[amount].slice()+PopFemales3[amount].slice())
+        
+        for amount in PopMales1:
+            TotalPopMales.append(PopMales1[amount].slice()+PopMales2[amount].slice()+PopMales3[amount].slice())
+        
+        print(TotalPopFemales)
+        
+        KidFile.close()
+        AdultFile.close()
+        SeniorFile.close()
+                
     
     def Option2(self):  #More Males than Females
         pass
@@ -157,7 +199,7 @@ def main():
     start = 0
     
     while start != 11:
-        start = menu()
+        start = menu()  #Keeps program going if not 11
         
         
 
