@@ -151,7 +151,7 @@ class MainFunctions():
                 print("# {:<28}      {:<15} {:<10} #".format("Country:", "Boys:", "Girls:"))
                 print("#--------------------------------------------------------------#")
             #print("  {:<28}      {:<15} {:<10}  ".format(T.SortedByMales[2], T.SortedByMales[1], T.SortedByMales[0]))
-            print(T.SortedByMales)
+            print(T.SortedByMales[6])
             
     def Option3(self):  #Population by Letter
         pass
