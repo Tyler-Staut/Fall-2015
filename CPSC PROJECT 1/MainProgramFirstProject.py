@@ -125,8 +125,6 @@ class MainFunctions():
 
    
     def Option1(self):  #All countries with all population
-        
-        T.createLists()
         count = 0
         for country in range(len(T.ListOfCountries)):
             count += 1
@@ -229,7 +227,7 @@ def menu():
     
 def main():
     start = 0
-    
+    T.createLists()
     while start != 11:
         start = menu()  #Keeps program going if not 11
         
