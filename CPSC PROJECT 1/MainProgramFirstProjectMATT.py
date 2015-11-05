@@ -225,7 +225,7 @@ class MainFunctions():
     def Option8(self):  #Countries with similar Male to Female ratios
         pass
     
-    def Option9(self):  #Higher Female to Male ratio
+    def Option9(self):  #Ratio of females to males
     
         FemaletoMale = []
         HigherFem = []
@@ -278,7 +278,7 @@ def menu():
     print("Option 6: Males to Females Percentage")
     print("Option 7: Top 20 Countries with Least amount of Children")
     print("Option 8: Countries with similar Male to Female ratios")
-    print("Option 9: Higher Female to Male ratio")
+    print("Option 9: Ratio of Females to males")
     print("Option 10: List all Data from File")
     print("Option 11: Quit Program")
     choice = int(input("Choose an Option: "))

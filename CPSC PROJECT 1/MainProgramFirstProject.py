@@ -227,7 +227,7 @@ class MainFunctions():  #We used a class to keep things in order
                 print("# {:<28}      {:<15} {:<10} {:<4} #".format("Country:", "Boys:", "Girls:", "Percent Males:"))
                 print("#-----------------------------------------------------------------------------#")
             print("  {:<28}      {:<15} {:<10} {:<4}% ".format(T.ListOfCountries[country], 
-                                                               T.TotalPopMales[country], T.TotalPopFemales[country], round(percent, 2)))
+                                                               T.TotalPopMales[country], T.TotalPopFemales[country], 50*round(percent, 2)))
     
     def Option7(self):  #Countries with Least amount of Children
         #-----LISTS-----#
@@ -261,7 +261,7 @@ class MainFunctions():  #We used a class to keep things in order
             else:
                 continue
             
-    def Option9(self):  #Higher Female to Male ratio
+    def Option9(self):  #Ratio of Females to males
         pass
     
     def Option10(self): #List all data from Specific file
@@ -300,7 +300,7 @@ def menu():
     print("Option 6: Males to Females Percentage")
     print("Option 7: Countries with Least amount of Children")
     print("Option 8: Countries with similar Male to Female ratios")
-    print("Option 9: Higher Female to Male ratio")
+    print("Option 9: Ratio of females to males")
     print("Option 10: List all Data from Specific File")
     print("Option 11: Quit Program")
     choice = int(input("Choose an Option: "))
