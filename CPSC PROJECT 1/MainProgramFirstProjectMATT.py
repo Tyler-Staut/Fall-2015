@@ -207,26 +207,19 @@ class MainFunctions():
     def Option6(self):  #Males to Females Percentage
         pass
     
-    def Option7(self):  #Countries with Least amount of Children
+    def Option7(self):  #Top 20 Countries with Least amount of Children
         Children = []
-        Children1 = []
         LeastChildren = []
-        countries2 = []
         print("#--------------------------------------------------------------#")
         print("# {:<28}      {:<15}  #".format("Country:", "Amount of Children"))
         print("#--------------------------------------------------------------#")
         for x in range(len(T.ListOfCountries)):
-            Children.append(int(T.PopFemales1[x]) + int(T.PopMales1[x]))
-        Children1 = Children[:]
+            Children.append(int(T.PopMales1[x]) + int(T.PopFemales1[x]))
+        LeastChildren = list(zip(T.ListOfCountries, Children))
+        LeastChildren = sorted(LeastChildren, key=itemgetter(1))
         
-        Children.sort()
-        for y in range(len(T.ListOfCountries)):
-            LeastChildren.append(Children[y])
-        for r in range(len(T.ListOfCountries)):
-            if LeastChildren[r] == Children1[r]:
-                countries2.append(T.ListOfCountries[r])
-        for z in range(10):
-            print("  {:<28}      {:<15} ".format(countries2[z], LeastChildren[z]))
+        for z in range(20):
+            print("  {:<28}      {:<15} ".format(LeastChildren[z][0], LeastChildren[z][1]))
                     
     
     def Option8(self):  #Countries with similar Male to Female ratios
@@ -266,7 +259,7 @@ def menu():
     print("Option 4: Top 10 Countries with the most people")    #Sub option would determine which file to display
     print("Option 5: Percentage of Old People")
     print("Option 6: Males to Females Percentage")
-    print("Option 7: Countries with Least amount of Children")
+    print("Option 7: Top 20 Countries with Least amount of Children")
     print("Option 8: Countries with similar Male to Female ratios")
     print("Option 9: Higher Female to Male ratio")
     print("Option 10: List all Data from File")

@@ -217,7 +217,18 @@ class MainFunctions():
             print("  {:<28}      {:<15} {:<10} {:<4}% ".format(T.ListOfCountries[country], T.TotalPopMales[country], T.TotalPopFemales[country], round(percent, 2)))
     
     def Option7(self):  #Countries with Least amount of Children
-        pass
+        Children = []
+        LeastChildren = []
+        print("#--------------------------------------------------------------#")
+        print("# {:<28}      {:<15}  #".format("Country:", "Amount of Children"))
+        print("#--------------------------------------------------------------#")
+        for x in range(len(T.ListOfCountries)):
+            Children.append(int(T.PopMales1[x]) + int(T.PopFemales1[x]))
+        LeastChildren = list(zip(T.ListOfCountries, Children))
+        LeastChildren = sorted(LeastChildren, key=itemgetter(1))
+        
+        for z in range(20):
+            print("  {:<28}      {:<15} ".format(LeastChildren[z][0], LeastChildren[z][1]))
     
     def Option8(self):  #Countries with similar Male to Female ratios
         count = 0
