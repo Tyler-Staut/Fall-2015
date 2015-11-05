@@ -206,7 +206,15 @@ class MainFunctions():
             print("  {:<28}      {:<15} {:<10}  ".format(T.SortedAll[z][0], (T.TotalPopFemales[z] + T.TotalPopMales[z]), OldRatio[z]))
     
     def Option6(self):  #Males to Females Percentage
-        pass
+        count = 0
+        for country in range(len(T.ListOfCountries)):
+            count += 1
+            percent = int(T.TotalPopMales[country]) / int(T.TotalPopFemales[country])
+            if ((count % 20) == 0) or (count == 0):
+                print("#-----------------------------------------------------------------------------#")
+                print("# {:<28}      {:<15} {:<10} {:<4} #".format("Country:", "Boys:", "Girls:", "Percent Males:"))
+                print("#-----------------------------------------------------------------------------#")
+            print("  {:<28}      {:<15} {:<10} {:<4}% ".format(T.ListOfCountries[country], T.TotalPopMales[country], T.TotalPopFemales[country], round(percent, 2)))
     
     def Option7(self):  #Countries with Least amount of Children
         pass
