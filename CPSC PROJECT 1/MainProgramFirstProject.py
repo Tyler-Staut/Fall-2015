@@ -25,8 +25,9 @@ class MainFunctions():
     TotalPopMales = []
     
     SortedByMales = []
-    #LISTS
+    
     SortedTop = []
+    #LISTS
     def Kid(self):
         myfile = open("WorldCensusAges0-14.csv")
         count = 0
