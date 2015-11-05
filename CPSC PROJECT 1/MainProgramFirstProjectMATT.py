@@ -226,7 +226,23 @@ class MainFunctions():
         pass
     
     def Option9(self):  #Higher Female to Male ratio
-        pass
+    
+        FemaletoMale = []
+        HigherFem = []
+        for r in range(len(T.ListOfCountries)):
+            FemaletoMale.append(int(T.TotalPopFemales[r])/int(T.TotalPopMales[r]))
+        for s in range(len(T.ListOfCountries)):
+            if FemaletoMale[s] > 1:
+                HigherFem.append(T.ListOfCountries[s])
+        count2 = 0
+        for z in range(len(T.ListOfCountries)):
+            count2 += 1
+            if ((count2 % 20) == 0) or (count2 == 0):
+                print("#-----------------------------------------------------------------#")
+                print("# {:<28}      {:<15} {:<10} #".format("Country:", "Total:", "Ratio of Females to Males:"))
+                print("#-----------------------------------------------------------------#")
+            print("  {:<28}      {:<15} {:<10}  ".format(T.SortedAll[z][0], (T.TotalPopFemales[z] + T.TotalPopMales[z]), FemaletoMale[z]))
+        
     
     def Option10(self): #List all data from Specific file
         print("Choose an age range.")
