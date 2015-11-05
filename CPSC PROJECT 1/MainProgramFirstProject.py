@@ -179,7 +179,7 @@ class MainFunctions():
                      
     def Option4(self):  #Top 10 Countries with the most people
         print("#--------------------------------------------------------------#")
-        print("# {:<28}      {:<15} {:<10} #".format("Country:", "Boys:", "Girls:"))
+        print("# {:<28}      {:<15}            #".format("Country:", "Total People:"))
         print("#--------------------------------------------------------------#")       
         for country in range(10):
             if T.SortedByTop[country][0]:
