@@ -234,15 +234,15 @@ class MainFunctions():
         for s in range(len(T.ListOfCountries)):
             if FemaletoMale[s] > 1:
                 HigherFem.append(T.ListOfCountries[s])
-        count2 = 0
+        count = 0
         
         for z in range(len(T.ListOfCountries)):
-            count2 += 1
-            if ((count2 % 20) == 0) or (count2 == 0):
-                print("#-----------------------------------------------------------------#")
+            count += 1
+            if ((count % 20) == 0) or (count == 1):
+                print("#------------------------------------------------------------------------------#")
                 print("# {:<28}      {:<15} {:<10} #".format("Country:", "Total:", "Ratio of Females to Males:"))
-                print("#-----------------------------------------------------------------#")
-            print("  {:<28}      {:<15} {:<10}  ".format(T.SortedAll[z][0], (T.TotalPopFemales[z] + T.TotalPopMales[z]), FemaletoMale[z]))
+                print("#------------------------------------------------------------------------------#")
+            print("  {:<28}      {:<15} {:<10}  ".format(T.SortedAll[z][0], (T.TotalPopFemales[z] + T.TotalPopMales[z]), round(FemaletoMale[z], 2)))
         
     
     def Option10(self): #List all data from Specific file

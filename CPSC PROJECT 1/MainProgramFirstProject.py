@@ -262,8 +262,22 @@ class MainFunctions():  #We used a class to keep things in order
                 continue
             
     def Option9(self):  #Ratio of Females to males
+        FemaletoMale = []
+        HigherFem = []
+        for r in range(len(T.ListOfCountries)):
+            FemaletoMale.append(int(T.TotalPopFemales[r])/int(T.TotalPopMales[r]))
+        for s in range(len(T.ListOfCountries)):
+            if FemaletoMale[s] > 1:
+                HigherFem.append(T.ListOfCountries[s])
+        count = 0
         
-        pass
+        for z in range(len(T.ListOfCountries)):
+            count += 1
+            if ((count % 20) == 0) or (count == 1):
+                print("#------------------------------------------------------------------------------#")
+                print("# {:<28}      {:<15} {:<10} #".format("Country:", "Total:", "Ratio of Females to Males:"))
+                print("#------------------------------------------------------------------------------#")
+            print("  {:<28}      {:<15} {:<10}  ".format(T.SortedAll[z][0], (T.TotalPopFemales[z] + T.TotalPopMales[z]), round(FemaletoMale[z], 2)))
     
     def Option10(self): #List all data from Specific file
         #-----OPTIONS-----#
