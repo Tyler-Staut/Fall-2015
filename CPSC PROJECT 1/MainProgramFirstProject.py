@@ -244,6 +244,7 @@ class MainFunctions():
                 print("  {:<28}      {:<15} {:<10} {:<4}% ".format(T.ListOfCountries[country], T.TotalPopMales[country], T.TotalPopFemales[country], round(percent, 2)))
             else:
                 continue
+            
     def Option9(self):  #Higher Female to Male ratio
         pass
     
