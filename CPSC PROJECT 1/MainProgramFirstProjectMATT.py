@@ -208,7 +208,25 @@ class MainFunctions():
         pass
     
     def Option7(self):  #Countries with Least amount of Children
-        pass
+        Children = []
+        Children1 = []
+        LeastChildren = []
+        countries2 = []
+        print("#--------------------------------------------------------------#")
+        print("# {:<28}      {:<15}  #".format("Country:", "Amount of Children"))
+        print("#--------------------------------------------------------------#")
+        for x in range(len(T.ListOfCountries)):
+            Children.append(int(T.PopFemales1[x]) + int(T.PopMales1[x]))
+        Children1 = Children[:]
+        Children.sort()
+        for y in range(len(T.ListOfCountries)):
+            LeastChildren.append(Children[y])
+        for r in range(len(T.ListOfCountries)):
+            if LeastChildren[r] == Children1[r]:
+                countries2.append(T.ListOfCountries[r])
+        for z in range(10):
+            print("  {:<28}      {:<15} ".format(countries2[z], LeastChildren[z]))
+                    
     
     def Option8(self):  #Countries with similar Male to Female ratios
         pass
