@@ -235,6 +235,7 @@ class MainFunctions():
             if FemaletoMale[s] > 1:
                 HigherFem.append(T.ListOfCountries[s])
         count2 = 0
+        
         for z in range(len(T.ListOfCountries)):
             count2 += 1
             if ((count2 % 20) == 0) or (count2 == 0):
