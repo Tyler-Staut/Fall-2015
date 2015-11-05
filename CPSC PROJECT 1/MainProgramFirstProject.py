@@ -8,10 +8,10 @@ from operator import itemgetter
 #-----------------#
 
 #-----LISTS-----#
-
+    #No lists ended up here because we needed access to then only in the classes and definitions within
 #---------------#
 
-class MainFunctions():
+class MainFunctions():  #We used a class to keep things in order
     #LISTS
     ListOfCountries = []
     PopFemales1 = []
@@ -28,7 +28,9 @@ class MainFunctions():
     
     SortedTop = []
     #LISTS
-    def Kid(self):
+    
+    #----------DEFINITIONS FOR OPTION 10----------#
+    def Kid(self):  
         myfile = open("WorldCensusAges0-14.csv")
         count = 0
         for line in myfile:
@@ -68,28 +70,31 @@ class MainFunctions():
                 print("#--------------------------------------------------------------#")
             print("  {:<28}      {:<15} {:<10}  ".format(fields[0].strip(), fields[1].strip(), fields[2].strip()))
         myfile.close()
-        
-    def openFile(self):
+    #----------------------------------------------#
+    
+    def openFile(self):     #Cant remember if we used this or not
         #-----OPENS FILES-----#
         KidFile = open("WorldCensusAges0-14.csv")
         AdultFile = open("WorldCensusAges15-64.csv")
         SeniorFile = open("WorldCensusAges64+.csv")
         #---------------------#
     
-    def closeFile(self):
+    def closeFile(self):    #Cant remember if we used this or not
         #-----CLOSES FILES-----#
         KidFile.close()
         AdultFile.close()
         SeniorFile.close()
         #----------------------#
         
-    def createLists(self):
-        #-----OPENS FILES-----#
+    def createLists(self):              #This sets up making lists for most of the functions in the program.
+        #-----OPENS FILES-----#         #Later we create lists within the option definitions because (someone) got lazy.
         KidFile = open("WorldCensusAges0-14.csv")
         AdultFile = open("WorldCensusAges15-64.csv")
         SeniorFile = open("WorldCensusAges64+.csv")
         #---------------------#
-        for line in KidFile:    #Sets up the lists
+        
+        #-----LIST SETUP-----#
+        for line in KidFile:    
             fields = (line.split(","))
             T.ListOfCountries.append(fields[0].strip())
             T.PopMales1.append(fields[1].strip())
@@ -124,7 +129,8 @@ class MainFunctions():
             sum += int(T.TotalPopMales[i])
             T.SortedTop.append(sum)
             sum = 0
-          
+        #--------------------#
+        
         #-----------SORTED BY ALL------------#
         T.SortedAll = list(zip(T.ListOfCountries, T.TotalPopMales, T.TotalPopFemales))  
         #-----------SORTED BY MALES----------#
@@ -134,6 +140,7 @@ class MainFunctions():
         T.SortedByTop = list(zip(T.ListOfCountries, T.SortedTop))
         T.SortedByTop = sorted(T.SortedByTop, key= itemgetter(1))
         T.SortedByTop.reverse()
+        #------------------------------------#
         
         #-----CLOSES FILES-----#
         KidFile.close()
@@ -148,11 +155,12 @@ class MainFunctions():
         count = 0
         for country in range(len(T.ListOfCountries)):
             count += 1
-            if ((count % 20) == 0) or (count == 0):
+            if ((count % 20) == 0) or (count == 1):
                 print("#--------------------------------------------------------------#")
                 print("# {:<28}      {:<15} {:<10} #".format("Country:", "Boys:", "Girls:"))
                 print("#--------------------------------------------------------------#")
-            print("  {:<28}      {:<15} {:<10}  ".format(T.ListOfCountries[country], T.TotalPopMales[country], T.TotalPopFemales[country]))
+            print("  {:<28}      {:<15} {:<10}  ".format(T.ListOfCountries[country], 
+                                                         T.TotalPopMales[country], T.TotalPopFemales[country]))
     
     def Option2(self):  #More Males than Females
         count = 0
@@ -162,8 +170,8 @@ class MainFunctions():
                 print("#--------------------------------------------------------------#")
                 print("# {:<28}      {:<15} {:<10} #".format("Country:", "Boys:", "Girls:"))
                 print("#--------------------------------------------------------------#")
-            
-            print("  {:<28}      {:<15} {:<10}  ".format(T.SortedByMales[country][0], T.SortedByMales[country][1], T.SortedByMales[country][2]))
+            print("  {:<28}      {:<15} {:<10}  ".format(T.SortedByMales[country][0], 
+                                                         T.SortedByMales[country][1], T.SortedByMales[country][2]))
             
     def Option3(self):  #Population by Letter
         count = 0
@@ -175,7 +183,8 @@ class MainFunctions():
         for country in range(len(T.ListOfCountries)):
             count += 1
             if T.ListOfCountries[country][0] == Letter:
-                print("  {:<28}      {:<15} {:<10}  ".format(T.SortedAll[country][0], T.SortedAll[country][1], T.SortedAll[country][2],))
+                print("  {:<28}      {:<15} {:<10}  ".format(T.SortedAll[country][0], 
+                                                             T.SortedAll[country][1], T.SortedAll[country][2],))
                      
                      
     def Option4(self):  #Top 10 Countries with the most people
@@ -187,14 +196,17 @@ class MainFunctions():
                 print("  {:<28}      {:<15}".format(T.SortedByTop[country][0], T.SortedByTop[country][1]))
     
     def Option5(self):  #Percentage of Old People
+        #-----LIST-----#
         OldPeople = []
-        
+        #--------------#
         count1 = 0
         for x in range(len(T.ListOfCountries)):
             OldPeople.append(int(T.PopFemales3[x]) + int(T.PopMales3[x]))
         OldRatio = []
         for y in range(len(T.ListOfCountries)):
-            OldRatio.append(int(OldPeople[y])/(int(T.PopFemales3[y]) + int(T.PopMales3[y]) + int(T.PopFemales2[y]) + int(T.PopMales2[y]) + int(T.PopFemales1[y]) + int(T.PopMales1[y])))
+            OldRatio.append(int(OldPeople[y])/(int(T.PopFemales3[y]) + int(T.PopMales3[y]) + 
+                                               int(T.PopFemales2[y]) + int(T.PopMales2[y]) + 
+                                               int(T.PopFemales1[y]) + int(T.PopMales1[y])))
         for r in range (len(T.ListOfCountries)):
             OldRatio[r] = round(OldRatio[r]*100, 2)
         for z in range(len(T.ListOfCountries)):
@@ -214,11 +226,14 @@ class MainFunctions():
                 print("#-----------------------------------------------------------------------------#")
                 print("# {:<28}      {:<15} {:<10} {:<4} #".format("Country:", "Boys:", "Girls:", "Percent Males:"))
                 print("#-----------------------------------------------------------------------------#")
-            print("  {:<28}      {:<15} {:<10} {:<4}% ".format(T.ListOfCountries[country], T.TotalPopMales[country], T.TotalPopFemales[country], round(percent, 2)))
+            print("  {:<28}      {:<15} {:<10} {:<4}% ".format(T.ListOfCountries[country], 
+                                                               T.TotalPopMales[country], T.TotalPopFemales[country], round(percent, 2)))
     
     def Option7(self):  #Countries with Least amount of Children
+        #-----LISTS-----#
         Children = []
         LeastChildren = []
+        #---------------#
         print("#--------------------------------------------------------------#")
         print("# {:<28}      {:<15}  #".format("Country:", "Amount of Children"))
         print("#--------------------------------------------------------------#")
@@ -241,7 +256,8 @@ class MainFunctions():
                     print("#-----------------------------------------------------------------------------#")
                     print("# {:<28}      {:<15} {:<10} {:<4} #".format("Country:", "Boys:", "Girls:", "Percent Males:"))
                     print("#-----------------------------------------------------------------------------#")
-                print("  {:<28}      {:<15} {:<10} {:<4}% ".format(T.ListOfCountries[country], T.TotalPopMales[country], T.TotalPopFemales[country], round(percent, 2)))
+                print("  {:<28}      {:<15} {:<10} {:<4}% ".format(T.ListOfCountries[country], 
+                                                                   T.TotalPopMales[country], T.TotalPopFemales[country], round(percent, 2)))
             else:
                 continue
             
@@ -249,10 +265,12 @@ class MainFunctions():
         pass
     
     def Option10(self): #List all data from Specific file
+        #-----OPTIONS-----#
         print("Choose an age range.")
         print("1: Ages 0-14")
         print("2: Ages 15-64")
         print("3: Ages 64+")
+        #-----------------#
         choice = int(input("Choose an Option: "))
         while choice not in (1,2,3):
             choice = int(input("Choose an Option: "))
@@ -267,6 +285,7 @@ class MainFunctions():
         
 #----------CLASS ASSIGNMENT----------#
 T = MainFunctions() #Main Class of functions
+                    #This makes it easier to call the class and things within the class instead of having to type the entire class name out.
 #------------------------------------#
 
 
@@ -282,7 +301,7 @@ def menu():
     print("Option 7: Countries with Least amount of Children")
     print("Option 8: Countries with similar Male to Female ratios")
     print("Option 9: Higher Female to Male ratio")
-    print("Option 10: List all Data from File")
+    print("Option 10: List all Data from Specific File")
     print("Option 11: Quit Program")
     choice = int(input("Choose an Option: "))
     
@@ -307,7 +326,7 @@ def menu():
         T.Option8()
     elif choice == 9:       #Higher Female to Tale ratio
         T.Option9()
-    elif choice == 10:      #List all Data from File
+    elif choice == 10:      #List all Data from specific File
         T.Option10()
     elif choice == 11:      #Quit
         return 11
