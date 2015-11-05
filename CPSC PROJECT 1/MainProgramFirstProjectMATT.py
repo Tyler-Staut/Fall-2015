@@ -218,6 +218,7 @@ class MainFunctions():
         for x in range(len(T.ListOfCountries)):
             Children.append(int(T.PopFemales1[x]) + int(T.PopMales1[x]))
         Children1 = Children[:]
+        
         Children.sort()
         for y in range(len(T.ListOfCountries)):
             LeastChildren.append(Children[y])
