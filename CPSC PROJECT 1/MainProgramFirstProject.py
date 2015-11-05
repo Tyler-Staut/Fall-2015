@@ -226,7 +226,7 @@ class MainFunctions():
             if percent == 1.00:
                 count += 1
                 percent = int(T.TotalPopMales[country]) / int(T.TotalPopFemales[country])
-                if ((count % 20) == 0) or (count == 1):
+                if (count == 1):
                     print("#-----------------------------------------------------------------------------#")
                     print("# {:<28}      {:<15} {:<10} {:<4} #".format("Country:", "Boys:", "Girls:", "Percent Males:"))
                     print("#-----------------------------------------------------------------------------#")
