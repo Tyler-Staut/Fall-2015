@@ -262,6 +262,7 @@ class MainFunctions():  #We used a class to keep things in order
                 continue
             
     def Option9(self):  #Ratio of Females to males
+        
         pass
     
     def Option10(self): #List all data from Specific file
