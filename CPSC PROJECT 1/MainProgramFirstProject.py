@@ -257,7 +257,7 @@ class MainFunctions():  #We used a class to keep things in order
                     print("# {:<28}      {:<15} {:<10} {:<4} #".format("Country:", "Boys:", "Girls:", "Percent Males:"))
                     print("#-----------------------------------------------------------------------------#")
                 print("  {:<28}      {:<15} {:<10} {:<4}% ".format(T.ListOfCountries[country], 
-                                                                   T.TotalPopMales[country], T.TotalPopFemales[country], round(percent, 2)))
+                                                                   T.TotalPopMales[country], T.TotalPopFemales[country], 50*round(percent, 2)))
             else:
                 continue
             
