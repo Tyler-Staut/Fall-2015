@@ -199,7 +199,7 @@ class MainFunctions():
             OldRatio[r] = round(OldRatio[r]*100, 2)
         for z in range(len(T.ListOfCountries)):
             count1 += 1
-            if ((count1 % 20) == 0) or (count1 == 0):
+            if ((count1 % 20) == 0) or (count1 == 1):
                 print("#-----------------------------------------------------------------#")
                 print("# {:<28}      {:<15} {:<10} #".format("Country:", "Total:", "Old People %:"))
                 print("#-----------------------------------------------------------------#")
@@ -220,8 +220,19 @@ class MainFunctions():
         pass
     
     def Option8(self):  #Countries with similar Male to Female ratios
-        pass
-    
+        count = 0
+        for country in range(len(T.ListOfCountries)):
+            percent = round((int(T.TotalPopMales[country]) / int(T.TotalPopFemales[country])), 2)
+            if percent == 1.00:
+                count += 1
+                percent = int(T.TotalPopMales[country]) / int(T.TotalPopFemales[country])
+                if ((count % 20) == 0) or (count == 1):
+                    print("#-----------------------------------------------------------------------------#")
+                    print("# {:<28}      {:<15} {:<10} {:<4} #".format("Country:", "Boys:", "Girls:", "Percent Males:"))
+                    print("#-----------------------------------------------------------------------------#")
+                print("  {:<28}      {:<15} {:<10} {:<4}% ".format(T.ListOfCountries[country], T.TotalPopMales[country], T.TotalPopFemales[country], round(percent, 2)))
+            else:
+                continue
     def Option9(self):  #Higher Female to Male ratio
         pass
     
