@@ -20,6 +20,7 @@ class MainFunctions():  #We used a class to keep things in order
     PopMales2 = []
     PopFemales3 = []
     PopMales3 = []
+    HersheySquirts = []
     
     TotalPopFemales = []
     TotalPopMales = []
