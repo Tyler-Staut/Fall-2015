@@ -48,10 +48,11 @@ def menu():   #Definition for the menu choices
 def encryptFile(alphabet, key):
     myFile = open("message.txt")
     cipherFile = open("cipher.txt", "w")
+    message = []
     for line in myFile:
         line.split()
     
-    message = list(line)
+        message += list(line)
     count = 0
     for char in message:
         count += 1
@@ -67,10 +68,11 @@ def encryptFile(alphabet, key):
 def decryptFile(alphabet, key):
     cipherFile = open("cipher.txt")
     plainFile = open("plain.txt", "w")
+    message = []
     for line in cipherFile:
         line.split()
     
-    message = list(line)
+        message += list(line)
     count = 0
     for char in message:
         count += 1
@@ -89,7 +91,7 @@ def breakCipher(alphabet):
     cipherFile = open("cipher.txt")
     
     for key in range(26):
-    
+        
         for line in cipherFile:
             line.split()
     
