@@ -1,0 +1,14 @@
+python
+list
+function
+print
+float
+string
+coding
+compile
+bug
+syntax
+tuple
+slice
+range
+index

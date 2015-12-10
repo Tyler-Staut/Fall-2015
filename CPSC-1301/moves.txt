@@ -1,0 +1,10 @@
+color
+goto(160,0)
+goto(0,160)
+goto(-160,0)
+goto(0,0)
+color
+bullshit
+goto(80,80)
+goto(-80,80)
+goto(0,0)
